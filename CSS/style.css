@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-size: 100%;
+    background-color: #304374;
+}
+
+body {
+    font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;
+    color: #FFF9EB;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* セクションタイトルのフォント */
+.sec-title {
+    display: inline-block;
+    font-family: "BIZ UDMincho", Times, serif;
+    font-size: 2rem;
+    border-bottom: solid 1px #FFF9EB;
+    padding-bottom: 8px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+/* 英語テキストのフォント */
+.en-txt {
+    font-family: "Poppins", sans-serif;
+}
+
+/* メモ⬇︎はアクセスアイコン、インスタアイコンをマウスオーバーしたときに色反転させるプロパティ */
+/* 
+img {
+transition: all 0.5s ease;
+}
+img:hover {
+filter:invert(100%);
+}
+*/
+
+
+/* ヘッダー--------------------------- */
+#header {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 22px;
+    background-color: #304374;
+    color: #E6C570;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .header-leftside span {
+    display: inline-block;
+    margin-left: 42px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+#header .header-btn {
+    height: 64px;
+    display: flex;
+}
+
+#header .header-btn a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* ⬇︎ハンバーガーメニュー */
+.hamburger {
+    width: 64px;
+    height: 64px;
+    background-color: #1E2B4C;
+    border-radius: 50%;
+    position: relative;
+    /* top: 20px;
+    right: 20px; */
+    z-index: 20;
+    /* ⬇︎クリックできることを示す(カーソルをポインターに設定) */
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 35px;
+    height: 2px;
+    /* ⬇︎スパンタグに幅や高さを持たせる */
+    display: inline-block;
+    background-color: #F1D99E;
+    /* ⬇︎左から15pxあける */
+    position: absolute;
+    left: 15px;
+    /* ⬇︎横線の角を少し丸く修正 */
+    border-radius: 1px;
+    /* ⬇︎開閉の動きをスムーズに */
+    transition: all .4s;
+}
+
+/* 一本めのスパンの位置を上から28pxのところに調整した */
+.hamburger span:nth-of-type(1) {
+    top: 24px;
+}
+
+/* 二本目のスパンの位置を下から28pxのところに調整 */
+.hamburger span:nth-of-type(2) {
+    bottom: 24px;
+}
+
+/* ⬇︎hamburgerであり、かつactiveである場合は、スペース無しで.でクラス名くっつける */
+/* 内容としては、一本めのスパンをトップから32pxのところにもっていき、-45度傾ける */
+.hamburger.active span:nth-of-type(1) {
+    top: 32px;
+    transform: rotate(-45deg);
+}
+
+/* 内容としては、二本めのスパンをトップから32pxのところにもっていき、45度傾ける */
+.hamburger.active span:nth-of-type(2) {
+    top: 32px;
+    transform: rotate(45deg);
+}
+
+/* 以下は中身のメニューに関する調整 */
+.navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* ⬇︎見えなくする、透明にする */
+    opacity: 0;
+    /* ⬇︎表示されなくする、隠す */
+    visibility: hidden;
+    transition: all .6s;
+}
+
+.navi.active {
+    /* ⬇︎透明から見えるように戻す */
+    opacity: 1;
+    /* ⬇︎表示に戻す */
+    visibility: visible;
+}
+
+.navi .menu li {
+    padding: 10px;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    opacity: .7;
+}
+
+
+/* メインビジュアル--------------------- */
+#main-visual {
+    color: #E6C570;
+    display: flex;
+    justify-content: end;
+}
+
+.mv-img {
+    margin: 100px 0 230px 66px;
+}
+
+.mv-txt {
+    margin-left: 238px;
+    margin-top: 170px;
+}
+
+.copy-ja {
+    font-family: "BIZ UDMincho", serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    filter: drop-shadow(0 0 25px #A28742);
+    margin-bottom: 25px;
+}
+
+.copy-en {
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    opacity: .5;
+}
+
+.copy-en span {
+    font-size: 1.5rem;
+}
+
+/* コンセプト------------------------ */
+
+#concept {
+    position: relative;
+}
+
+#concept .concept-bg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -10;
+}
+
+#concept .wrapper .sec-title {
+    padding-top: 100px;
+}
+
+#concept .concept-flexbox {
+    margin-bottom: 100px;
+    display: flex;
+}
+
+#concept .concept-txt {
+    width: 390px;
+    margin-top: 80px;
+    margin-left: 9%;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    filter: drop-shadow(0 0 25px #1E2B4C);
+}
+
+/* メニュー--------------------------- */
+
+#menu {
+    background-color: #FFF9EB;
+    color: #1E2B4C;
+}
+
+#menu .sec-title {
+    border-bottom: solid 1px #1E2B4C;
+}
+
+.menu-navi {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1E2B4C;
+}
+
+.menu-navi a {
+    margin: 25px 0;
+    display: inline-block;
+    color: #FFF9EB;
+}
+
+.menu-navi a::after {
+    content: url(../img/top/menu-triangle.png);
+    margin-left: 10px;
+}
+
+.menu-flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-flexitem img {
+    width: 480px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.menu-txt {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.menu-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.menu-title span {
+    float: right;
+}
+
+/* インフォメーション--------------------------- */
+#info {
+    position: relative;
+}
+
+#info .info-bg {
+    width: 85%;
+    height: 100%;
+    background-color: #1E2B4C;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+}
+
+.info-wrapper {
+    width: 84%;
+    margin-left: auto;
+    background-color: #1E2B4C;
+}
+
+.info-content {
+    width: 600px;
+    margin-left: 423px;
+}
+
+.info-img {
+    margin-bottom: 20px;
+}
+
+.info-txt {
+    width: 600px;
+    text-align: center;
+    border-bottom: solid 1px #FFF9EB;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info-txt span {
+    float: left;
+}
+
+.info-btn {
+    width: 600px;
+    text-align: right;
+}
+
+.info-btn a {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: inline-block;
+    padding: 20px 114px;
+    background-color: #FFF9EB;
+    color: #1E2B4C;
+    text-align: right;
+}
+
+.info-btn a::after {
+    content: url(../img/top/info-triangle.png);
+    margin-left: 10px;
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+/* アクセス----------------------------------- */
+
+#access {
+    width: 100%;
+    background: url(../img/top/access-bg.png) no-repeat top center/cover;
+    color: #1E2B4C;
+}
+
+#access .sec-title {
+    border-bottom: solid 1px #1E2B4C;
+}
+
+.access-flexbox {
+    display: flex;
+    justify-content: space-evenly;
+}
+.access-flexitem {
+    width: 40%;
+}
+.access-flexitem {
+    position: relative;
+    padding-bottom: 35%;
+    margin-bottom: 100px;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #access .txt {
+    line-height: 1.5;
+  }
+  #access .sub-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+  }
+
+  /* フッター------------------------------------- */
+
+  #footer .footer-navi {
+    margin-top: 100px;
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  #footer .footer-navi li {
+    margin-right: 40px;
+  }

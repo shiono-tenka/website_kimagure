@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="品川駅から徒歩3分で着くコーヒーにこだわったカフェのホームページ">
+    <link rel="icon" href="./img/top/favicon.png">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>気まぐれ</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header-leftside">
+            <img src="./img/top/logo.png" alt="気まぐれのロゴ">
+            <span>OPEN 7:00-16:00</span>
+        </div>
+        <div class="header-btn">
+            <a href="#"><img src="./img/top/access-btn.png" alt="アクセスボタン"></a>
+            <a href="#"><img src="./img/top/insta.png" alt="インスタアイコン"></a>
+
+            <!-- ⬇︎ハンバーガーメニュ -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navi">
+                <ul class="menu">
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">CONCEPT</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">INFORMATION</a></li>
+                    <li><a href="#">ACCESS</a></li>
+                </ul>
+            </nav>
+            <script>
+                // ⬇︎querySelectorで.hamburgerクラスの要素を選択して、
+                // addEventListenerというのは、「こういうときに」の意で今回は「クリックした時に」、
+                // functionというのは、「何をしてください」の指令で今回は「activeのクラスを付け足してください」。
+                // toggleはスイッチ要員で1回押したらactiveのクラスをつけ（ON）、もう1回押したらactiveのクラスを外す（OFF)
+                document.querySelector('.hamburger').addEventListener
+                    ('click', function () {
+                        this.classList.toggle('active');
+                        // ⬇︎naviにも同様にactiveをつけたり外したりしてください。
+                        document.querySelector('.navi').classList.toggle('active')
+                    });
+            </script>
+            <!-- ⬆︎ハンバーガーメニュー -->
+        </div>
+
+    </header>
+    <main>
+        <!-- メインビジュアル -->
+        <section id="main-visual">
+            <div class="mv-txt">
+                <p class="copy-ja">品川駅近3分、<br>
+                    ほっと一息つける場所。</p>
+                <p class="copy-en en-txt"><span>Coffee & Morning</span> <br>
+                    <br> Take a moment for yourself and relax with a warm cup of coffee in hand.
+                </p>
+            </div>
+            <div class="mv-img"><img src="./img/top/pc-mv.png" alt="コーヒーを淹れてる写真"></div>
+        </section>
+
+        <!-- コンセプト -->
+        <section id="concept">
+            <div class="concept-bg">
+                <img src="./img/top/concept-bg.png" alt="コーヒー豆背景">
+            </div>
+            <div class="wrapper">
+                <h2 class="sec-title">CONCEPT</h2>
+                <div class="concept-flexbox">
+                    <div class="concept-img"><img src="./img/top/concept.png" alt="コーヒー豆などの写真"></div>
+                    <div class="concept-txt">
+                        <p>繰り返されていく日々の中で、何気ない幸せを感じてほしい。</p><br>
+                        <p>新鮮なコーヒーとともに、<br>
+                            お好きな本や雑誌を片手に、ゆったりとした時間を。</p><br><br>
+                        <p>気まぐれでは、通勤前や仕事の合間に <br>
+                            リラックスできる心地よい空間を提供しています。</p><br>
+                        <p>忙しい毎日を少しだけ忘れて、心安らぐひとときをお楽しみください。</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- メニュー -->
+        <section id="menu">
+            <div class="wrapper">
+                <h2 class="sec-title">MENU</h2>
+                <ul class="menu-navi">
+                    <li><a href="#">季節限定</a></li>
+                    <li><a href="#">Morning</a></li>
+                    <li><a href="#">Cafe</a></li>
+                    <li><a href="#">Take Out</a></li>
+                </ul>
+                <div class="menu-flexbox">
+                    <div class="menu-flexitem">
+                        <img src="./img/top/toast.jpg" alt="トーストセットの写真">
+                        <div class="menu-txt">
+                            <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
+                            <p>
+                                お好きなコーヒーとバターをたっぷり塗った <br>
+                                シンプルなトーストのセット。<br>
+                                コーヒー豆はその日の気分でお選びいただけます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-flexitem">
+                        <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                        <div class="menu-txt">
+                            <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <p>
+                                その日のマスターが厳選する新鮮な具材を使って <br>
+                                作るサンドイッチとスープのセットです。<br>
+                                心を込めた特製モーニングをご堪能ください。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- インフォメーション -->
+        <section id="info">
+            <div class="info-bg">
+            </div>
+            <div class="wrapper">
+                <h2 class="sec-title">INFORMATION</h2>
+                <div class="info-content">
+                    <div class="info-img"><img src="./img/top/info.png" alt="お知らせの写真"></div>
+                    <p class="info-txt"><span>2025.04.05</span>旬なトマトで新メニュー</p>
+                    <p class="info-txt"><span>2025.03.14</span>関東コーヒーイベントに選出！</p>
+                    <div class="info-btn"><a href="#">More</a></div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- アクセス -->
+        <section id="access">
+            <div class="wrapper">
+                <h2 class="sec-title">ACCESS</h2>
+                <div class="access-flexbox">
+                    <div class="map access-flexitem">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1780.8145565752966!2d139.73937778955903!3d35.6283943834486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1745188805315!5m2!1sja!2sjp"
+                             style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="txt access-flexitem">
+                        <p class="sub-title">-気まぐれ-</p> <br>
+                        <p>Address <br>
+                            〒000-0000 <br>
+                            東京都〇〇区〇〇丁目1-1　××ビルB1</p> <br>
+                        <p>JR〇〇駅東口方面から出て左に徒歩約3分ほど歩くと <br>
+                            紺色の看板がみえてきます。</p> <br>
+                        <p>Open 7:00 / Close 16:00 <br>
+                            (日曜定休)
+                        </p> <br>
+                        <p>Tel:030-1234-5678</p>
+                        <p>Mail:info@kimagure.co.jp</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer id="footer" class="wrapper">
+        <ul class="footer-navi">
+            <li>TOP</li>
+            <li>CONCEPT</li>
+            <li>MENU</li>
+            <li>INFORMATION</li>
+            <li>ACCESS</li>
+            <li>ONLINE SHOP</li>
+        </ul>
+        <div class="footer-logo">
+            <img src="./img/top/logo.png" alt="気まぐれのロゴ">
+        </div>
+        <p>&copy; 2025 気まぐれ All Rights Reserved.</p>
+    </footer>
+    
+
+</body>
+
+</html>
