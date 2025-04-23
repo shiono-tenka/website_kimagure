@@ -145,11 +145,10 @@ filter:invert(100%);
     top: 0;
     left: 0;
     z-index: 10;
-    /* ⬇︎見えなくする、透明にする */
+    /* アニメーション部分 */
+    pointer-events: none;
     opacity: 0;
-    /* ⬇︎表示されなくする、隠す */
-    visibility: hidden;
-    transition: all .6s;
+    transition: opacity .5s linear;
 }
 
 .navi-logo {
@@ -188,20 +187,16 @@ filter:invert(100%);
 .navi .menu li {
     margin-bottom: 32px;
 }
-.navi .menu li:last-child {
-    margin-bottom: ;
-}
-
 
 .navi.active {
-    /* ⬇︎透明から見えるように戻す */
+    pointer-events: auto;
     opacity: 1;
-    /* ⬇︎表示に戻す */
-    visibility: visible;
 }
+
 .navi .menu li {
     padding: 10px;
 }
+
 .navi .contact {
     line-height: 2;
     position: absolute;
@@ -213,11 +208,13 @@ filter:invert(100%);
 .navi .contact a {
     color: #E6C570;
 }
+
 .navi .contact .tel a::before {
     content: url(../img/top/tel.png);
     padding-right: 8px;
     vertical-align: sub;
 }
+
 .navi .contact .mail a::before {
     content: url(../img/top/contact.png);
     padding-right: 8px;
