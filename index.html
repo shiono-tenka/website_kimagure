@@ -106,33 +106,136 @@
         <section id="menu">
             <div class="wrapper">
                 <h2 class="sec-title">MENU</h2>
-                <ul class="menu-navi">
-                    <li><a href="#">季節限定</a></li>
-                    <li><a href="#">Morning</a></li>
-                    <li><a href="#">Cafe</a></li>
-                    <li><a href="#">Take Out</a></li>
-                </ul>
-                <div class="menu-flexbox">
-                    <div class="menu-flexitem">
-                        <img src="./img/top/toast.jpg" alt="トーストセットの写真">
-                        <div class="menu-txt">
-                            <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
-                            <p>
-                                お好きなコーヒーとバターをたっぷり塗った <br>
-                                シンプルなトーストのセット。<br>
-                                コーヒー豆はその日の気分でお選びいただけます。
-                            </p>
+                <div class="tabs">
+                    <input id="season" type="radio" name="tab_item" checked>
+                    <label class="tab_item" for="season">季節限定<span class="season-triangle"></span></label>
+            
+                    <input id="Morning" type="radio" name="tab_item">
+                    <label class="tab_item" for="Morning">Morning<span class="Morning-triangle"></span></label>
+            
+                    <input id="Cafe" type="radio" name="tab_item">
+                    <label class="tab_item" for="Cafe">Cafe<span class="Cafe-triangle"></span></label>
+            
+                    <input id="Takeout" type="radio" name="tab_item">
+                    <label class="tab_item" for="Takeout">Take Out<span class="Takeout-triangle"></span></label>
+            
+            <!-- 季節限定コンテンツ -->
+                    <div class="tab_content" id="season_content">
+                        <div class="menu-flexbox">
+                            <div class="menu-flexitem">
+                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">旬のトマトとチェダーチーズサンド <span>￥550</span></p>
+                                    <p>
+                                        お好きなコーヒーとバターをたっぷり塗った <br>
+                                        シンプルなトーストのセット。<br>
+                                        コーヒー豆はその日の気分でお選びいただけます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-flexitem">
+                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                                    <p>
+                                        その日のマスターが厳選する新鮮な具材を使って <br>
+                                        作るサンドイッチとスープのセットです。<br>
+                                        心を込めた特製モーニングをご堪能ください。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="menu-flexitem">
-                        <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                        <div class="menu-txt">
-                            <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
-                            <p>
-                                その日のマスターが厳選する新鮮な具材を使って <br>
-                                作るサンドイッチとスープのセットです。<br>
-                                心を込めた特製モーニングをご堪能ください。
-                            </p>
+            <!-- モーニングコンテンツ -->
+                    <div class="tab_content" id="Morning_content">
+                        <div class="menu-flexbox">
+                            <div class="menu-flexitem">
+                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
+                                    <p>
+                                        お好きなコーヒーとバターをたっぷり塗った <br>
+                                        シンプルなトーストのセット。<br>
+                                        コーヒー豆はその日の気分でお選びいただけます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-flexitem">
+                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                                    <p>
+                                        その日のマスターが厳選する新鮮な具材を使って <br>
+                                        作るサンドイッチとスープのセットです。<br>
+                                        心を込めた特製モーニングをご堪能ください。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- カフェコンテンツ -->
+                    <div class="tab_content" id="Cafe_content">
+                        <div class="menu-flexbox">
+                            <div class="menu-flexitem">
+                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれブレンド <span>￥450</span></p>
+                                    <p>
+                                        お好きなコーヒーとバターをたっぷり塗った <br>
+                                        シンプルなトーストのセット。<br>
+                                        コーヒー豆はその日の気分でお選びいただけます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-flexitem">
+                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                                    <p>
+                                        その日のマスターが厳選する新鮮な具材を使って <br>
+                                        作るサンドイッチとスープのセットです。<br>
+                                        心を込めた特製モーニングをご堪能ください。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-flexitem">
+                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                                    <p>
+                                        その日のマスターが厳選する新鮮な具材を使って <br>
+                                        作るサンドイッチとスープのセットです。<br>
+                                        心を込めた特製モーニングをご堪能ください。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- テイクアウトコンテンツ -->
+                    <div class="tab_content" id="Takeout_content">
+                        <div class="menu-flexbox">
+                            <div class="menu-flexitem">
+                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
+                                    <p>
+                                        お好きなコーヒーとバターをたっぷり塗った <br>
+                                        シンプルなトーストのセット。<br>
+                                        コーヒー豆はその日の気分でお選びいただけます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-flexitem">
+                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu-txt">
+                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                                    <p>
+                                        その日のマスターが厳選する新鮮な具材を使って <br>
+                                        作るサンドイッチとスープのセットです。<br>
+                                        心を込めた特製モーニングをご堪能ください。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
