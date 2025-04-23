@@ -21,51 +21,54 @@
 <body>
     <!-- ヘッダー -->
     <header id="header">
-        <div class="header-leftside">
-            <img src="./img/top/logo.png" alt="気まぐれのロゴ">
-            <span>OPEN 7:00-16:00</span>
-        </div>
-        <div class="header-btn">
-            <a href="#"><img src="./img/top/access-btn.png" alt="アクセスボタン"></a>
-            <a href="#"><img src="./img/top/insta.png" alt="インスタアイコン"></a>
-
-            <!-- ⬇︎ハンバーガーメニュ -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
+        <div class="header-flexbox">
+            <div class="header-leftside">
+                <img src="./img/top/logo.png" alt="気まぐれのロゴ">
+                <span>OPEN 7:00-16:00</span>
             </div>
-            <nav class="navi">
-                    <div class="navi-logo">
-                        <img src="./img/top/logo.png" alt="気まぐれのロゴ">
-                        <span>OPEN 7:00-16:00</span>
-                    </div>
-                    <ul class="menu">
-                        <li><a href="#">TOP</a></li>
-                        <li><a href="#concept">CONCEPT</a></li>
-                        <li><a href="#menu">MENU</a></li>
-                        <li><a href="#info">INFORMATION</a></li>
-                        <li><a href="#access">ACCESS</a></li>
-                    </ul>
-                    <div class="contact">
-                        <p class="tel"><a href="#">030-1234-5678</a></p>
-                        <p class="mail"><a href="#">CONTACT</a></p>
-                    </div>
-                
-            </nav>
-            <script>
-                // ⬇︎querySelectorで.hamburgerクラスの要素を選択して、
-                // addEventListenerというのは、「こういうときに」の意で今回は「クリックした時に」、
-                // functionというのは、「何をしてください」の指令で今回は「activeのクラスを付け足してください」。
-                // toggleはスイッチ要員で1回押したらactiveのクラスをつけ（ON）、もう1回押したらactiveのクラスを外す（OFF)
-                document.querySelector('.hamburger').addEventListener
-                    ('click', function () {
-                        this.classList.toggle('active');
-                        // ⬇︎naviにも同様にactiveをつけたり外したりしてください。
-                        document.querySelector('.navi').classList.toggle('active')
-                    });
-            </script>
-            <!-- ⬆︎ハンバーガーメニュー -->
+            <div class="header-btn">
+                <a href="#"><img src="./img/top/access-btn.png" alt="アクセスボタン"></a>
+                <a href="#"><img src="./img/top/insta.png" alt="インスタアイコン"></a>
+    
+                <!-- ⬇︎ハンバーガーメニュ -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="navi">
+                        <div class="navi-logo">
+                            <img src="./img/top/logo.png" alt="気まぐれのロゴ">
+                            <span>OPEN 7:00-16:00</span>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#concept">CONCEPT</a></li>
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#info">INFORMATION</a></li>
+                            <li><a href="#access">ACCESS</a></li>
+                        </ul>
+                        <div class="contact">
+                            <p class="tel"><a href="#">030-1234-5678</a></p>
+                            <p class="mail"><a href="#">CONTACT</a></p>
+                        </div>
+                    
+                </nav>
+                <script>
+                    // ⬇︎querySelectorで.hamburgerクラスの要素を選択して、
+                    // addEventListenerというのは、「こういうときに」の意で今回は「クリックした時に」、
+                    // functionというのは、「何をしてください」の指令で今回は「activeのクラスを付け足してください」。
+                    // toggleはスイッチ要員で1回押したらactiveのクラスをつけ（ON）、もう1回押したらactiveのクラスを外す（OFF)
+                    document.querySelector('.hamburger').addEventListener
+                        ('click', function () {
+                            this.classList.toggle('active');
+                            // ⬇︎naviにも同様にactiveをつけたり外したりしてください。
+                            document.querySelector('.navi').classList.toggle('active')
+                        });
+                </script>
+                <!-- ⬆︎ハンバーガーメニュー -->
+            </div>
         </div>
+        
 
     </header>
     <main>
