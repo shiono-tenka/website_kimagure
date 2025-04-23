@@ -62,7 +62,7 @@ filter:invert(100%);
     display: flex;
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 42px;
     padding-bottom: 22px;
     color: #E6C570;
     justify-content: space-between;
@@ -141,7 +141,7 @@ filter:invert(100%);
     width: 49%;
     height: 100vh;
     background-color: #1E2B4C;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
@@ -233,18 +233,22 @@ a:hover {
 }
 
 .mv-img {
-    margin: 100px 0 230px 66px;
+    width: 60%;
+    margin: 230px 0 230px 66px;
 }
 
 .mv-txt {
-    margin-left: 238px;
-    margin-top: 170px;
+    width: 40%;
+    margin-left: 230px;
+    margin-top: 320px;
+    position: static;
+    z-index: -10;
 }
 
 .copy-ja {
     font-family: "BIZ UDMincho", serif;
     font-size: 2.5rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.01em;
     line-height: 1.5;
     filter: drop-shadow(0 0 25px #A28742);
     margin-bottom: 25px;
