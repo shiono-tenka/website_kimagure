@@ -140,9 +140,9 @@ filter:invert(100%);
 
 /* 以下は中身のメニューに関する調整 */
 .navi {
-    width: 100%;
+    width: 49%;
     height: 100vh;
-    background-color: #fff;
+    background-color: #1E2B4C;
     position: fixed;
     top: 0;
     left: 0;
@@ -154,12 +154,42 @@ filter:invert(100%);
     transition: all .6s;
 }
 
+.navi-logo {
+    max-width: 60%;
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 22px;
+}
+
+.navi-logo span {
+    display: inline-block;
+    vertical-align: 16px;
+    margin-left: 42px;
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+.navi .menu a {
+    color: #E6C570;
+    font-size: 1.5rem;
+    font-family: "BIZ UDMincho", Times, serif;
+}
+
+
+
+.navi .menu {
+    width: 27%;
+    height: 43%;
+    margin: auto;
+}
+
 .navi.active {
     /* ⬇︎透明から見えるように戻す */
     opacity: 1;
     /* ⬇︎表示に戻す */
     visibility: visible;
 }
+
 
 .navi .menu li {
     padding: 10px;
@@ -378,39 +408,68 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
 }
+
 .access-flexitem {
     width: 40%;
 }
+
 .access-flexitem {
     position: relative;
     padding-bottom: 35%;
     margin-bottom: 100px;
     height: 0;
     overflow: hidden;
-  }
-  
-  .map iframe {
+}
+
+.map iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  #access .txt {
+}
+
+#access .txt {
     line-height: 1.5;
-  }
-  #access .sub-title {
+}
+
+#access .sub-title {
     font-size: 1.25rem;
     letter-spacing: 0.1rem;
-  }
+}
 
-  /* フッター------------------------------------- */
+/* フッター------------------------------------- */
 
-  #footer .footer-navi {
+#footer {
+    color: #E6C570;
+}
+
+#footer .footer-navi {
     margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
-    /* justify-content: space-between; */
-  }
-  #footer .footer-navi li {
+}
+
+#footer .footer-navi li {
     margin-right: 40px;
-  }
+}
+
+.footer-navi a {
+    color: #E6C570;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    display: inline-block;
+    width: 20%;
+    margin-bottom: 100px;
+}
+
+small {
+    display: block;
+    text-align: end;
+    margin-bottom: 30px;
+}
