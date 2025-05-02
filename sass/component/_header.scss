@@ -1,1 +1,16 @@
 // ヘッダーのスタイル
+@use '../base/variables' as var;
+@use '../base/mixin' as mix;
+.header {
+    width: 100%;
+    border: 5px solid red;
+    @include mix.sp {
+        border: 10px solid green;
+    }
+    &__logo {
+        width: 1000px;
+        @include mix.sp {
+            width: 20px;
+        }
+    }
+}
