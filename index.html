@@ -21,37 +21,37 @@
 <body>
     <!-- ヘッダー -->
     <header id="header">
-        <div class="header-flexbox">
-            <div class="header-leftside">
+        <div class="header__flexbox">
+            <div class="header__logo">
                 <img src="./img/top/logo.png" alt="気まぐれのロゴ">
                 <span>OPEN 7:00-16:00</span>
             </div>
-            <div class="header-btn">
-                <a href="#"><img src="./img/top/access-btn.png" alt="アクセスボタン"></a>
-                <a href="#"><img src="./img/top/insta.png" alt="インスタアイコン"></a>
-    
+            <div class="header__btn">
+                <a href="#"><img class="header__btn--access" src="./img/top/access-btn.png" alt="アクセスボタン"></a>
+                <a href="#"><img class="header__btn--insta" src="./img/top/insta.png" alt="インスタアイコン"></a>
+
                 <!-- ⬇︎ハンバーガーメニュ -->
-                <div class="hamburger">
+                <div class="header__btn--hamburger-line">
                     <span></span>
                     <span></span>
                 </div>
-                <nav class="navi">
-                        <div class="navi-logo">
-                            <img src="./img/top/logo.png" alt="気まぐれのロゴ">
-                            <span>OPEN 7:00-16:00</span>
-                        </div>
-                        <ul class="menu">
-                            <li><a href="#">TOP</a></li>
-                            <li><a href="#concept">CONCEPT</a></li>
-                            <li><a href="#menu">MENU</a></li>
-                            <li><a href="#info">INFORMATION</a></li>
-                            <li><a href="#access">ACCESS</a></li>
-                        </ul>
-                        <div class="contact">
-                            <p class="tel"><a href="#">030-1234-5678</a></p>
-                            <p class="mail"><a href="#">CONTACT</a></p>
-                        </div>
-                    
+                <nav class="header__hamburger-content">
+                    <div class="header__logo">
+                        <img src="./img/top/logo.png" alt="気まぐれのロゴ">
+                        <span>OPEN 7:00-16:00</span>
+                    </div>
+                    <ul class="header__hamburger-menu">
+                        <li><a href="#">TOP</a></li>
+                        <li><a href="#concept">CONCEPT</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#info">INFORMATION</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                    </ul>
+                    <div class="header__hamburger-contact">
+                        <p><a href="#">030-1234-5678</a></p>
+                        <p><a href="#">CONTACT</a></p>
+                    </div>
+
                 </nav>
                 <script>
                     // ⬇︎querySelectorで.hamburgerクラスの要素を選択して、
@@ -68,32 +68,33 @@
                 <!-- ⬆︎ハンバーガーメニュー -->
             </div>
         </div>
-        
-
     </header>
+    <script src="js/main.js"></script>
+    <!-- メイン -->
     <main>
+
         <!-- メインビジュアル -->
         <section id="main-visual">
-            <div class="mv-txt">
-                <p class="copy-ja">品川駅近3分、<br>
+            <div class="mv__txt">
+                <p class="mv__txt-ja">品川駅近3分、<br>
                     ほっと一息つける場所。</p>
-                <p class="copy-en en-txt"><span>Coffee & Morning</span> <br>
+                <p class="mv__txt-en en__txt"><span>Coffee & Morning</span> <br>
                     <br> Take a moment for yourself and relax with a warm cup of coffee in hand.
                 </p>
             </div>
-            <div class="mv-img"><img src="./img/top/pc-mv.png" alt="コーヒーを淹れてる写真"></div>
+            <div class="mv__img"><img src="./img/top/pc-mv.png" alt="コーヒーを淹れてる写真"></div>
         </section>
 
         <!-- コンセプト -->
         <section id="concept">
-            <div class="concept-bg">
+            <div class="concept__bg">
                 <img src="./img/top/concept-bg.png" alt="コーヒー豆背景">
             </div>
             <div class="wrapper">
-                <h2 class="sec-title">CONCEPT</h2>
-                <div class="concept-flexbox">
-                    <div class="concept-img"><img src="./img/top/concept.png" alt="コーヒー豆などの写真"></div>
-                    <div class="concept-txt">
+                <h2 class="sec__title">CONCEPT</h2>
+                <div class="concept__flexbox">
+                    <div class="concept__flexbox--img"><img src="./img/top/concept.png" alt="コーヒー豆などの写真"></div>
+                    <div class="concept__flexbox--txt">
                         <p>繰り返されていく日々の中で、何気ない幸せを感じてほしい。</p><br>
                         <p>新鮮なコーヒーとともに、<br>
                             お好きな本や雑誌を片手に、ゆったりとした時間を。</p><br><br>
@@ -108,27 +109,27 @@
         <!-- メニュー -->
         <section id="menu">
             <div class="wrapper">
-                <h2 class="sec-title">MENU</h2>
-                <div class="tabs">
-                    <input id="season" type="radio" name="tab_item" checked>
-                    <label class="tab_item" for="season">季節限定<span class="season-triangle"></span></label>
-            
-                    <input id="Morning" type="radio" name="tab_item">
-                    <label class="tab_item" for="Morning">Morning<span class="Morning-triangle"></span></label>
-            
-                    <input id="Cafe" type="radio" name="tab_item">
-                    <label class="tab_item" for="Cafe">Cafe<span class="Cafe-triangle"></span></label>
-            
-                    <input id="Takeout" type="radio" name="tab_item">
-                    <label class="tab_item" for="Takeout">Take Out<span class="Takeout-triangle"></span></label>
-            
-            <!-- 季節限定コンテンツ -->
-                    <div class="tab_content" id="season_content">
-                        <div class="menu-flexbox">
-                            <div class="menu-flexitem">
-                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">旬のトマトとチェダーチーズサンド <span>￥550</span></p>
+                <h2 class="sec__title">MENU</h2>
+                <div class="menu__tabs">
+                    <input id="season" type="radio" name="menu__tab-item" checked>
+                    <label class="menu__tab-item" for="season">季節限定<span class="season-triangle"></span></label>
+
+                    <input id="Morning" type="radio" name="menu__tab-item">
+                    <label class="menu__tab-item" for="Morning">Morning<span class="Morning-triangle"></span></label>
+
+                    <input id="Cafe" type="radio" name="menu__tab-item">
+                    <label class="menu__tab-item" for="Cafe">Cafe<span class="Cafe-triangle"></span></label>
+
+                    <input id="Takeout" type="radio" name="menu__tab-item">
+                    <label class="menu__tab-item" for="Takeout">Take Out<span class="Takeout-triangle"></span></label>
+
+                    <!-- 季節限定コンテンツ -->
+                    <div class="menu__content" id="season_content">
+                        <div class="menu__content--flexbox">
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">旬のトマトとチェダーチーズサンド <span>￥550</span></p>
                                     <p>
                                         お好きなコーヒーとバターをたっぷり塗った <br>
                                         シンプルなトーストのセット。<br>
@@ -136,10 +137,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="menu-flexitem">
-                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれサンドイッチセット <span>￥890</span></p>
                                     <p>
                                         その日のマスターが厳選する新鮮な具材を使って <br>
                                         作るサンドイッチとスープのセットです。<br>
@@ -149,13 +150,13 @@
                             </div>
                         </div>
                     </div>
-            <!-- モーニングコンテンツ -->
-                    <div class="tab_content" id="Morning_content">
-                        <div class="menu-flexbox">
-                            <div class="menu-flexitem">
-                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
+                    <!-- モーニングコンテンツ -->
+                    <div class="menu__content" id="Morning_content">
+                        <div class="menu__content--flexbox">
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">シンプルトーストセット <span>￥550</span></p>
                                     <p>
                                         お好きなコーヒーとバターをたっぷり塗った <br>
                                         シンプルなトーストのセット。<br>
@@ -163,10 +164,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="menu-flexitem">
-                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <div class="menu__content--flexbox">
+                                <img class="menu__img" src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれサンドイッチセット <span>￥890</span></p>
                                     <p>
                                         その日のマスターが厳選する新鮮な具材を使って <br>
                                         作るサンドイッチとスープのセットです。<br>
@@ -176,13 +177,13 @@
                             </div>
                         </div>
                     </div>
-            <!-- カフェコンテンツ -->
-                    <div class="tab_content" id="Cafe_content">
-                        <div class="menu-flexbox">
-                            <div class="menu-flexitem">
-                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれブレンド <span>￥450</span></p>
+                    <!-- カフェコンテンツ -->
+                    <div class="menu__content" id="Cafe_content">
+                        <div class="menu__content--flexbox">
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれブレンド <span>￥450</span></p>
                                     <p>
                                         お好きなコーヒーとバターをたっぷり塗った <br>
                                         シンプルなトーストのセット。<br>
@@ -190,10 +191,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="menu-flexitem">
-                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれサンドイッチセット <span>￥890</span></p>
                                     <p>
                                         その日のマスターが厳選する新鮮な具材を使って <br>
                                         作るサンドイッチとスープのセットです。<br>
@@ -201,10 +202,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="menu-flexitem">
-                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれサンドイッチセット <span>￥890</span></p>
                                     <p>
                                         その日のマスターが厳選する新鮮な具材を使って <br>
                                         作るサンドイッチとスープのセットです。<br>
@@ -214,13 +215,13 @@
                             </div>
                         </div>
                     </div>
-            <!-- テイクアウトコンテンツ -->
-                    <div class="tab_content" id="Takeout_content">
-                        <div class="menu-flexbox">
-                            <div class="menu-flexitem">
-                                <img src="./img/top/toast.jpg" alt="トーストセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">シンプルトーストセット <span>￥550</span></p>
+                    <!-- テイクアウトコンテンツ -->
+                    <div class="menu__content" id="Takeout_content">
+                        <div class="menu__content--flexbox">
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/toast.jpg" alt="トーストセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">シンプルトーストセット <span>￥550</span></p>
                                     <p>
                                         お好きなコーヒーとバターをたっぷり塗った <br>
                                         シンプルなトーストのセット。<br>
@@ -228,10 +229,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="menu-flexitem">
-                                <img src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
-                                <div class="menu-txt">
-                                    <p class="menu-title">気まぐれサンドイッチセット <span>￥890</span></p>
+                            <div class="menu__content--flexitem">
+                                <img class="menu__img" src="./img/top/sandwich.png" alt="サンドイッチセットの写真">
+                                <div class="menu__txt">
+                                    <p class="menu__txt-title">気まぐれサンドイッチセット <span>￥890</span></p>
                                     <p>
                                         その日のマスターが厳選する新鮮な具材を使って <br>
                                         作るサンドイッチとスープのセットです。<br>
@@ -246,15 +247,15 @@
         </section>
         <!-- インフォメーション -->
         <section id="info">
-            <div class="info-bg">
+            <div class="info__bg">
             </div>
             <div class="wrapper">
-                <h2 class="sec-title">INFORMATION</h2>
-                <div class="info-content">
-                    <div class="info-img"><img src="./img/top/info.png" alt="お知らせの写真"></div>
-                    <p class="info-txt"><span>2025.04.05</span>旬なトマトで新メニュー</p>
-                    <p class="info-txt"><span>2025.03.14</span>関東コーヒーイベントに選出！</p>
-                    <div class="info-btn"><a href="#">More</a></div>
+                <h2 class="sec__title">INFORMATION</h2>
+                <div class="info__content">
+                    <div class="info__content--img"><img src="./img/top/info.png" alt="お知らせの写真"></div>
+                    <p class="info__content--txt"><span>2025.04.05</span>旬なトマトで新メニュー</p>
+                    <p class="info__content--txt"><span>2025.03.14</span>関東コーヒーイベントに選出！</p>
+                    <div class="info__content--btn"><a href="#">More</a></div>
                 </div>
 
             </div>
@@ -263,16 +264,16 @@
         <!-- アクセス -->
         <section id="access">
             <div class="wrapper">
-                <h2 class="sec-title">ACCESS</h2>
-                <div class="access-flexbox">
-                    <div class="map access-flexitem">
+                <h2 class="sec__title">ACCESS</h2>
+                <div class="access__flexbox">
+                    <div class="access-map access__flexitem">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1780.8145565752966!2d139.73937778955903!3d35.6283943834486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1745188805315!5m2!1sja!2sjp"
-                             style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="txt access-flexitem">
-                        <p class="sub-title">-気まぐれ-</p> <br>
+                    <div class="access-txt access-flexitem">
+                        <p class="access__sub-title">-気まぐれ-</p> <br>
                         <p>Address <br>
                             〒000-0000 <br>
                             東京都〇〇区〇〇丁目1-1　××ビルB1</p> <br>
@@ -291,7 +292,7 @@
     </main>
     <!-- フッター -->
     <footer id="footer" class="wrapper">
-        <ul class="footer-navi">
+        <ul class="footer__navi">
             <li><a href="#">TOP</a></li>
             <li><a href="#concept">CONCEPT</a></li>
             <li><a href="#menu">MENU</a></li>
@@ -299,13 +300,11 @@
             <li><a href="#access">ACCESS</a></li>
             <li><a href="#">ONLINE SHOP</a></li>
         </ul>
-        <div class="footer-logo">
+        <div class="footer__logo">
             <img src="./img/top/logo.png" alt="気まぐれのロゴ">
         </div>
-        <p><small>&copy; 2025 気まぐれ All Rights Reserved.</small></p>
+        <p class="footer__copy-right"><small>&copy; 2025 気まぐれ All Rights Reserved.</small></p>
     </footer>
-    
-
 </body>
 
 </html>

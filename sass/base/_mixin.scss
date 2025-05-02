@@ -1,0 +1,94 @@
+// ブレイクポイント情報
+@use 'variables' as var;
+
+
+@mixin pc {
+   @media (max-width: (var.$pc)) {
+       @content;
+   }
+}
+@mixin tab {
+   @media screen and (min-width:(var.$tab)) and (max-width:(var.$pc)) {
+     @content;
+   }
+}
+@mixin sp {
+   @media screen and (min-width: 0px) and (max-width: (var.$sp)) {
+     @content;
+   }
+}
+// 横幅の指定変更（後でメディアクエリの制御を行うときも一括で管理可能？？）
+@mixin wrapperWidth {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+// flexboxの指定
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+ //フォントの呼び出し
+// 本文用（BIZ UDPGothic）
+@mixin bizGothic {
+    font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  // 英字用（Poppins）
+  @mixin poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  // タイトル用（BIZ UDPMincho）
+  @mixin bizMincho {
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+//   バナー用ボックスシャドウ
+  @mixin boxShadow($transparent) {
+    box-shadow: 6px 6px 30px 0px rgba(230, 197, 112, $transparent);
+  }
+// MV用テキストシャドウ
+  @mixin M-textShadow($transparent){
+    text-shadow: 0px 0px 25px 4px rgba(162, 135, 66, $transparent);
+  }
+//   Cobcept用テキストシャドウ
+  @mixin C-textShadow($transparent){
+    text-shadow: 0px 0px 25px 0px rgba(30, 43, 76, $transparent);
+  }
+
+// セクション間のスペース   
+  @mixin sectionSpacing {
+    max-width: 1024px;
+    margin: var.$mgLarge auto 0;
+  }
+
+//   セクションタイトル
+  @mixin secTitle($color) {
+    font-family: "BIZ UDPMincho", serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: $color;
+    border-bottom: 1px solid $color;
+  }
+// ボタンホバー時は反転する
+  @mixin buttonHoverInvert($bgColor, $textColor) {
+    background-color: $bgColor;
+    color: $textColor;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: $textColor;
+      color: $bgColor;
+    }
+  }

@@ -1,0 +1,29 @@
+@use './variables' as var;
+
+/* リセットCSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body {
+    font-size: 100%;
+    font-family: "Helvetica", sans-serif;  /* サイト全体で使うフォント */
+    line-height: 1.5;
+    color: var.$Pastelyellow;  /* 基本の文字色 */
+    background-color: var.$Baseblue;  /* 基本の背景色 */
+  }
+
+
