@@ -18,28 +18,19 @@ a {
 
 html, body {
   font-size: 100%;
-  font-family: "Helvetica", sans-serif; /* サイト全体で使うフォント */
+  font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif; /* サイト全体で使うフォント */
   line-height: 1.5;
   color: #FFF9EB; /* 基本の文字色 */
   background-color: #304374; /* 基本の背景色 */
 }
 
-.header {
-  width: 100%;
-  border: 5px solid red;
+.en-txt {
+  font-family: "Poppins", sans-serif;
 }
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  .header {
-    border: 10px solid green;
-  }
-}
-.header__logo {
-  width: 1000px;
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  .header__logo {
-    width: 20px;
-  }
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .sec__title {
@@ -50,4 +41,12 @@ html, body {
   padding-bottom: 8px;
   margin-top: 100px;
   margin-bottom: 40px;
+}
+
+.header {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

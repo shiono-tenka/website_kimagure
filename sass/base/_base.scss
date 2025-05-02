@@ -20,10 +20,16 @@ a {
 
 html, body {
     font-size: 100%;
-    font-family: "Helvetica", sans-serif;  /* サイト全体で使うフォント */
+    font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;  /* サイト全体で使うフォント */
     line-height: 1.5;
     color: var.$pastelYellow;  /* 基本の文字色 */
     background-color: var.$baseBlue;  /* 基本の背景色 */
   }
-
+  .en-txt {
+    font-family: "Poppins", sans-serif;
+}
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
 
