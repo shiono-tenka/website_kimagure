@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ('click', function () {
             this.classList.toggle('active');
             // ⬇︎naviにも同様にactiveをつけたり外したりしてください。
-            document.querySelector('.navi').classList.toggle('active')
+            document.querySelector('.header__hamburger-content').classList.toggle('active')
         });
     // console.log("OKEN");
 });

@@ -43,8 +43,178 @@ html, body {
   margin-bottom: 40px;
 }
 
-.header {
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   width: 100%;
+}
+
+.header__container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 22px;
+  color: #E6C570;
+  justify-content: space-between;
+}
+
+#header .header__logo-time span {
+  display: inline-block;
+  margin-left: 42px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+#header .header__btn {
+  height: 64px;
+  display: flex;
+}
+
+#header .header__btn a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* ⬇︎ハンバーガーメニュー */
+.hamburger {
+  width: 64px;
+  height: 64px;
+  background-color: #1E2B4C;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+  /* ⬇︎クリックできることを示す(カーソルをポインターに設定) */
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 35px;
+  height: 2px;
+  /* ⬇︎スパンタグに幅や高さを持たせる */
+  display: inline-block;
+  background-color: #F1D99E;
+  /* ⬇︎左から15pxあける */
+  position: absolute;
+  left: 15px;
+  /* ⬇︎横線の角を少し丸く修正 */
+  border-radius: 1px;
+  /* ⬇︎開閉の動きをスムーズに */
+  transition: all 0.4s;
+}
+
+/* 一本めのスパンの位置を上から28pxのところに調整した */
+.hamburger span:nth-of-type(1) {
+  top: 24px;
+}
+
+/* 二本目のスパンの位置を下から28pxのところに調整 */
+.hamburger span:nth-of-type(2) {
+  bottom: 24px;
+}
+
+/* ⬇︎hamburgerであり、かつactiveである場合は、スペース無しで.でクラス名くっつける */
+/* 内容としては、一本めのスパンをトップから32pxのところにもっていき、-45度傾ける */
+.hamburger.active span:nth-of-type(1) {
+  top: 32px;
+  transform: rotate(-45deg);
+}
+
+/* 内容としては、二本めのスパンをトップから32pxのところにもっていき、45度傾ける */
+.hamburger.active span:nth-of-type(2) {
+  top: 32px;
+  transform: rotate(45deg);
+}
+
+/* 以下は中身のメニューに関する調整 */
+.header__hamburger-content {
+  width: 49%;
+  height: 100vh;
+  background-color: #1E2B4C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* アニメーション部分 */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.header__hamburger-content--logo {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 22px;
+}
+
+.header__hamburger-content--logo span {
+  display: inline-block;
+  vertical-align: 16px;
+  margin-left: 42px;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+
+.header__hamburger-content--menu a {
+  color: #E6C570;
+  font-size: 1.5rem;
+  font-family: "BIZ UDMincho", Times, serif;
+}
+
+.header__hamburger-content--menu {
+  width: 27%;
+  position: absolute;
+  top: 50%;
+  /*親のtopから50%*/
+  left: 50%;
+  /*親のleftから50%*/
+  transform: translateY(-45%) translateX(-50%);
+  /*子要素自体の大きさを考慮*/
+  margin: auto;
+}
+
+.header__hamburger-content--menu li {
+  margin-bottom: 32px;
+}
+
+.header__hamburger-content.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.header__hamburger-content--menu li {
+  padding: 10px;
+}
+
+.header__hamburger-content--contact {
+  line-height: 2;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__hamburger-content--contact a {
+  color: #E6C570;
+}
+
+.header__hamburger-content--contact .tel a::before {
+  content: url(../img/top/tel.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+
+.header__hamburger-content--contact .mail a::before {
+  content: url(../img/top/contact.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 .footer {
