@@ -1,5 +1,5 @@
-@use 'parts';
-@use 'header';
-@use 'menu';
-@use 'top';
-@use 'footer';
+@use '../component/parts';
+@use '../component/header';
+@use '../component/menu';
+@use '../page/top'; // ← ここ直す！
+@use '../component/footer';

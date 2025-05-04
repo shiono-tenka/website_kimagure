@@ -1,1 +1,314 @@
 // TOPページ専用のスタイル
+/* ヒーローエリア--------------------- */
+#hero-area {
+    color: #E6C570;
+    display: flex;
+    justify-content: end;
+}
+
+.hero__img {
+    width: 60%;
+    margin: 230px 0 230px 66px;
+}
+
+.hero__txt {
+    width: 40%;
+    margin-left: 230px;
+    margin-top: 320px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero__txt-ja {
+    font-family: "BIZ UDMincho", serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    filter: drop-shadow(0 0 25px #A28742);
+    margin-bottom: 25px;
+}
+
+.hero__txt-en {
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    opacity: .5;
+}
+
+.hero__txt-en span {
+    font-size: 1.5rem;
+}
+
+/* コンセプト------------------------ */
+
+#concept {
+    position: relative;
+}
+
+#concept .concept__bg {
+    position: absolute;
+    top: 100px;
+    left: 0; 
+  }
+.concept__wrapper {
+    z-index: 1;
+    position: relative;
+}
+#concept .concept__title {
+    padding-top: 100px;
+}
+
+#concept .concept__container {
+    margin-bottom: 100px;
+    display: flex;
+}
+
+#concept .concept__container--txt {
+    width: 390px;
+    margin-top: 80px;
+    margin-left: 9%;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    filter: drop-shadow(0 0 25px #1E2B4C);
+  }
+
+/* メニュー--------------------------- */
+
+#menu {
+    background-color: #FFF9EB;
+    color: #1E2B4C;
+}
+
+#menu .menu__title {
+    border-bottom: solid 1px #1E2B4C;
+}
+
+.menu__tabs {
+    margin-top: 50px;
+    background-color: #FFF9EB;
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+.menu__tabs-item {
+    width: calc(100%/4);
+    height: 67px;
+    background-color: #1E2B4C;
+    line-height: 67px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF9EB;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__tabs-item:hover {
+    opacity: 0.75;
+}
+
+input[name="menu__tabs-item"] {
+    display: none;
+}
+
+.menu__content {
+    display: none;
+    padding-top: 40px;
+    clear: both;
+    overflow: hidden;
+}
+
+/*選択されているタブのコンテンツのみを表示*/
+#season:checked~#season_content,
+#Morning:checked~#Morning_content,
+#Cafe:checked~#Cafe_content,
+#Takeout:checked~#Takeout_content {
+    display: block;
+}
+
+.menu__tabs input:checked+.menu__tabs-item {
+    background-color: #304374;
+    color: #FFF9EB;
+}
+
+.season-triangle {
+    position: absolute;
+    top: 30px;
+    right: 75px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.Morning-triangle {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.Cafe-triangle {
+    position: absolute;
+    top: 30px;
+    right: 85px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.Takeout-triangle {
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.menu__content--flexbox {
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu__content--flexitem img {
+    width: 480px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.menu__content--flexitem div {
+    text-align: center;
+    margin: 40px auto;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.menu__txt-title {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.menu__txt-title span {
+    float: right;
+}
+
+/* インフォメーション--------------------------- */
+#info {
+    position: relative;
+}
+
+#info .info__bg {
+    width: 85%;
+    height: 100%;
+    background-color: #1E2B4C;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.info__wrapper {
+    z-index: 1;
+    position: relative;
+}
+
+.info__content {
+    width: 600px;
+    margin-left: 423px;
+}
+
+.info__content--img {
+    margin-bottom: 20px;
+}
+
+.info__content--txt {
+    width: 600px;
+    text-align: center;
+    border-bottom: solid 1px #FFF9EB;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info__content--txt span {
+    float: left;
+}
+
+.info__content--btn {
+    width: 600px;
+    text-align: right;
+}
+
+.info__content--btn a {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    display: inline-block;
+    padding: 20px 114px;
+    background-color: #FFF9EB;
+    color: #1E2B4C;
+    text-align: right;
+}
+
+.info__content--btn a::after {
+    content: url(../img/top/info-triangle.png);
+    margin-left: 10px;
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+/* アクセス----------------------------------- */
+
+#access {
+    width: 100%;
+    background: url(../img/top/access-bg.png) no-repeat top center/cover;
+    color: #1E2B4C;
+}
+
+.access__title {
+    border-bottom: solid 1px #1E2B4C;
+}
+
+.access__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.access__container--content {
+    width: 40%;
+    position: relative;
+    padding-bottom: 35%;
+    margin-bottom: 100px;
+    height: 0;
+    overflow: hidden;
+}
+
+.access__container--map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.access__container--txt {
+    line-height: 1.5;
+}
+
+.access__container--sub-title {
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+}
