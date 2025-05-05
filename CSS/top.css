@@ -141,11 +141,10 @@
 }
 
 /* インフォメーション--------------------------- */
-#info {
+.info {
   position: relative;
 }
-
-#info .info__bg {
+.info__bg {
   width: 85%;
   height: 100%;
   background-color: #1E2B4C;
@@ -153,21 +152,17 @@
   top: 0;
   right: 0;
 }
-
 .info__wrapper {
   z-index: 1;
   position: relative;
 }
-
 .info__content {
   width: 600px;
   margin-left: 423px;
 }
-
 .info__content--img {
   margin-bottom: 20px;
 }
-
 .info__content--txt {
   width: 600px;
   text-align: center;
@@ -175,50 +170,44 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .info__content--txt span {
   float: left;
 }
-
 .info__content--btn {
   width: 600px;
   text-align: right;
 }
-
 .info__content--btn a {
-  color: #333;
   margin-top: 40px;
   margin-bottom: 100px;
   display: inline-block;
   padding: 20px 114px;
   background-color: #FFF9EB;
   color: #1E2B4C;
-  text-align: right;
 }
-
 .info__content--btn a::after {
   content: url(../img/top/info-triangle.png);
   margin-left: 10px;
   display: inline-block;
   transform: translateY(1px);
 }
+.info__content--btn a:hover {
+  opacity: 0.7;
+}
 
 /* アクセス----------------------------------- */
-#access {
+.access {
   width: 100%;
   background: url(../img/top/access-bg.png) no-repeat top center/cover;
   color: #1E2B4C;
 }
-
 .access__title {
   border-bottom: solid 1px #1E2B4C;
 }
-
 .access__container {
   display: flex;
   justify-content: space-evenly;
 }
-
 .access__container--content {
   width: 40%;
   position: relative;
@@ -227,7 +216,6 @@
   height: 0;
   overflow: hidden;
 }
-
 .access__container--map iframe {
   position: absolute;
   top: 0;
@@ -235,11 +223,9 @@
   width: 100%;
   height: 100%;
 }
-
 .access__container--txt {
   line-height: 1.5;
 }
-
 .access__container--sub-title {
   font-size: 1.25rem;
   letter-spacing: 0.1rem;

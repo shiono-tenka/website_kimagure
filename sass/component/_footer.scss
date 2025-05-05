@@ -1,55 +1,48 @@
 // フッターのスタイル
-#footer {
+.footer {
     color: #E6C570;
-}
-
-.footer__navi {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-}
-
-.footer__navi li {
-    margin-right: 40px;
-}
-
-.footer__navi a {
-    padding-bottom: 8px;
-    color: #E6C570;
-    position: relative;
-}
-.footer__navi a::after {
-    position: absolute;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #E6C570;
-    bottom: -1px;
-    transform: scale(0, 1);
-    transform-origin: center top;
-    /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-    transition: transform 0.3s;
-    /*変形の時間*/
-}
-
-.footer__navi a:hover::after {
-    transform: scale(1, 1);
-    /*ホバー後、x軸方向に1（相対値）伸長*/
-}
-
-.footer__logo {
-    text-align: center;
-}
-
-.footer__logo img {
-    display: inline-block;
-    width: 20%;
-    margin-bottom: 100px;
-}
-
-small {
-    display: block;
-    text-align: end;
-    margin-bottom: 30px;
+    &__navi {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        li {
+            margin-right: 40px;
+        }
+        a {
+            padding-bottom: 8px;
+            color: #E6C570;
+            position: relative;
+            &::after {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #E6C570;
+                bottom: -1px;
+                transform: scale(0, 1);
+                transform-origin: center top;
+                /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+                transition: transform 0.3s;
+                /*変形の時間*/
+            }
+            &:hover::after {
+                transform: scale(1, 1);
+                /*ホバー後、x軸方向に1（相対値）伸長*/
+            }
+        }
+    }
+    &__logo {
+        text-align: center;
+        img {
+            display: inline-block;
+            width: 20%;
+            margin-bottom: 100px;
+        }
+    }
+    small {
+        display: block;
+        text-align: end;
+        margin-bottom: 30px;
+    }
 }

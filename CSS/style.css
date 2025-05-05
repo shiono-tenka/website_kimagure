@@ -368,11 +368,10 @@ html, body {
 }
 
 /* インフォメーション--------------------------- */
-#info {
+.info {
   position: relative;
 }
-
-#info .info__bg {
+.info__bg {
   width: 85%;
   height: 100%;
   background-color: #1E2B4C;
@@ -380,21 +379,17 @@ html, body {
   top: 0;
   right: 0;
 }
-
 .info__wrapper {
   z-index: 1;
   position: relative;
 }
-
 .info__content {
   width: 600px;
   margin-left: 423px;
 }
-
 .info__content--img {
   margin-bottom: 20px;
 }
-
 .info__content--txt {
   width: 600px;
   text-align: center;
@@ -402,50 +397,44 @@ html, body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .info__content--txt span {
   float: left;
 }
-
 .info__content--btn {
   width: 600px;
   text-align: right;
 }
-
 .info__content--btn a {
-  color: #333;
   margin-top: 40px;
   margin-bottom: 100px;
   display: inline-block;
   padding: 20px 114px;
   background-color: #FFF9EB;
   color: #1E2B4C;
-  text-align: right;
 }
-
 .info__content--btn a::after {
   content: url(../img/top/info-triangle.png);
   margin-left: 10px;
   display: inline-block;
   transform: translateY(1px);
 }
+.info__content--btn a:hover {
+  opacity: 0.7;
+}
 
 /* アクセス----------------------------------- */
-#access {
+.access {
   width: 100%;
   background: url(../img/top/access-bg.png) no-repeat top center/cover;
   color: #1E2B4C;
 }
-
 .access__title {
   border-bottom: solid 1px #1E2B4C;
 }
-
 .access__container {
   display: flex;
   justify-content: space-evenly;
 }
-
 .access__container--content {
   width: 40%;
   position: relative;
@@ -454,7 +443,6 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-
 .access__container--map iframe {
   position: absolute;
   top: 0;
@@ -462,36 +450,30 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
 .access__container--txt {
   line-height: 1.5;
 }
-
 .access__container--sub-title {
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
 }
 
-#footer {
+.footer {
   color: #E6C570;
 }
-
 .footer__navi {
   margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
 }
-
 .footer__navi li {
   margin-right: 40px;
 }
-
 .footer__navi a {
   padding-bottom: 8px;
   color: #E6C570;
   position: relative;
 }
-
 .footer__navi a::after {
   position: absolute;
   left: 0;
@@ -506,23 +488,19 @@ html, body {
   transition: transform 0.3s;
   /*変形の時間*/
 }
-
 .footer__navi a:hover::after {
   transform: scale(1, 1);
   /*ホバー後、x軸方向に1（相対値）伸長*/
 }
-
 .footer__logo {
   text-align: center;
 }
-
 .footer__logo img {
   display: inline-block;
   width: 20%;
   margin-bottom: 100px;
 }
-
-small {
+.footer small {
   display: block;
   text-align: end;
   margin-bottom: 30px;
