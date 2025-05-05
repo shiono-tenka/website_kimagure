@@ -9,4 +9,47 @@
     margin-top: 100px;
     margin-bottom: 40px;
 }
+// メニューセクションの三角形インジケーター
+.season-triangle {
+    position: absolute;
+    top: 30px;
+    right: 75px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
 
+.Morning-triangle {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.Cafe-triangle {
+    position: absolute;
+    top: 30px;
+    right: 85px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}
+
+.Takeout-triangle {
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 10px solid #FFF9EB;
+}

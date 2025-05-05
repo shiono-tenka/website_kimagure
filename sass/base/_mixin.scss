@@ -92,3 +92,14 @@
       color: $bgColor;
     }
   }
+  // 三角形のインジケーター
+  // @mixin triangle-indicator($right) {
+  //   position: absolute;
+  //   top: 30px;
+  //   right: $right;
+  //   width: 0;
+  //   height: 0;
+  //   border-right: 5px solid transparent;
+  //   border-left: 5px solid transparent;
+  //   border-top: 10px solid #FFF9EB;
+  // }
