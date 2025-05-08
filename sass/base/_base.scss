@@ -1,3 +1,4 @@
+@use '../base/mixin' as mix;
 @use './variables' as var;
 
 /* リセットCSS */
@@ -24,6 +25,12 @@ html, body {
     line-height: 1.5;
     color: var.$pastelYellow;  /* 基本の文字色 */
     background-color: var.$baseBlue;  /* 基本の背景色 */
+    @include mix.tab{
+        font-size: 80%;
+    }
+    @include mix.sp{
+        font-size: 70%;
+    }
   }
   .en-txt {
     font-family: "Poppins", sans-serif;

@@ -23,6 +23,16 @@ html, body {
   color: #FFF9EB; /* 基本の文字色 */
   background-color: #304374; /* 基本の背景色 */
 }
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  html, body {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  html, body {
+    font-size: 70%;
+  }
+}
 
 .en-txt {
   font-family: "Poppins", sans-serif;
@@ -96,6 +106,7 @@ html, body {
 }
 #header .header__container {
   display: flex;
+  width: 85%;
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 42px;
@@ -103,11 +114,36 @@ html, body {
   color: #E6C570;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  #header .header__container {
+    width: 85%;
+    padding-top: 36px;
+    padding-bottom: 18px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container {
+    width: 70%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+}
 #header .header__container .header__logo-time span {
   display: inline-block;
   margin-left: 42px;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  #header .header__container .header__logo-time span {
+    margin-left: 32px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container .header__logo-time span {
+    display: none;
+  }
 }
 #header .header__container .header__btn {
   height: 64px;
@@ -163,7 +199,13 @@ html, body {
   /* アニメーション部分 */
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s linear;
+  transition: none;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content {
+    width: 100%;
+    padding: 0 16px;
+  }
 }
 .header__hamburger-content--logo {
   max-width: 60%;
@@ -173,10 +215,21 @@ html, body {
 }
 .header__hamburger-content--logo span {
   display: inline-block;
-  vertical-align: 16px;
-  margin-left: 42px;
+  vertical-align: 100%;
+  margin-left: 32px;
   line-height: 1.5;
   font-size: 0.8rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo {
+    max-width: 90%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .header__hamburger-content--logo span {
+    margin-left: 20px;
+    font-size: 0.7rem;
+  }
 }
 .header__hamburger-content--menu {
   width: 27%;
@@ -198,16 +251,29 @@ html, body {
   margin-bottom: 32px;
   padding: 10px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--menu {
+    width: 70%;
+  }
+  .header__hamburger-content--menu a {
+    font-size: 1.2rem;
+  }
+  .header__hamburger-content--menu li {
+    margin-bottom: 24px;
+    padding: 8px;
+  }
+}
 .header__hamburger-content.active {
   pointer-events: auto;
   opacity: 1;
+  transition: opacity 0.3s linear;
 }
 .header__hamburger-content--contact {
   line-height: 2;
   position: absolute;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
 }
 .header__hamburger-content--contact a {
   color: #E6C570;
@@ -222,8 +288,25 @@ html, body {
   padding-right: 8px;
   vertical-align: sub;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--contact {
+    line-height: 1.8;
+    font-size: 0.9rem;
+    bottom: 4%;
+  }
+}
 .header__hamburger-content a:hover {
   opacity: 0.7;
+}
+
+.menu-top.active {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.menu-concept.active {
+  pointer-events: none;
+  opacity: 0;
 }
 
 /* ヒーローエリア--------------------- */

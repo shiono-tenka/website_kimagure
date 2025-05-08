@@ -1,4 +1,6 @@
 // メニュー（ハンバーガーメニュー）のスタイル
+@use '../base/variables' as var;
+@use '../base/mixin' as mix;
 
 .hamburger {
     width: 64px;
@@ -54,7 +56,12 @@
     /* アニメーション部分 */
     pointer-events: none;
     opacity: 0;
-    transition: opacity .5s linear;
+    transition: none;
+
+    @include mix.sp {
+        width: 100%;
+        padding: 0 16px;
+      }
 
     &--logo {
         max-width: 60%;
@@ -64,11 +71,21 @@
 
         span {
             display: inline-block;
-            vertical-align: 16px;
-            margin-left: 42px;
+            vertical-align: 100%;
+            margin-left: 32px;
             line-height: 1.5;
             font-size: 0.8rem;
         }
+        @include mix.sp {
+            max-width: 90%;
+            padding-top: 24px;
+            padding-bottom: 16px;
+      
+            span {
+              margin-left: 20px;
+              font-size: 0.7rem;
+            }
+          }
     }
 
     &--menu {
@@ -92,11 +109,22 @@
             margin-bottom: 32px;
             padding: 10px;
         }
+        @include mix.sp {
+            width: 70%; 
+            a {
+              font-size: 1.2rem;
+            }
+            li {
+              margin-bottom: 24px;
+              padding: 8px;
+            }
+          }
     }
 
     &.active {
         pointer-events: auto;
         opacity: 1;
+        transition: opacity 0.3s linear;
     }
 
     &--contact {
@@ -104,7 +132,7 @@
         position: absolute;
         bottom: 5%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-60%);
 
         a {
             color: #E6C570;
@@ -128,10 +156,25 @@
                 }
             }
         }
+        @include mix.sp {
+            line-height: 1.8;
+            font-size: 0.9rem;
+            bottom: 4%;
+          }
     }
     a:hover {
         opacity: .7;
       }      
+}
+
+// ⬇︎テスト
+.menu-top.active {
+    pointer-events: none;
+    opacity: 0;
+}
+.menu-concept.active {
+    pointer-events: none;
+    opacity: 0;
 }
 
 // .hamburger {

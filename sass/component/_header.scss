@@ -11,6 +11,7 @@
 
     .header__container {
         display: flex;
+        width: 85%;
         max-width: 1280px;
         margin: 0 auto;
         padding-top: 42px;
@@ -18,19 +19,39 @@
         color: #E6C570;
         justify-content: space-between;
 
+        @include mix.tab {
+            width: 85%;
+            padding-top: 36px;
+            padding-bottom: 18px;
+        }
+
+        @include mix.sp {
+            width: 70%;
+            padding-top: 24px;
+            padding-bottom: 16px;
+        }
+
         .header__logo-time {
             span {
                 display: inline-block;
                 margin-left: 42px;
                 line-height: 1.5;
                 font-size: 1.5rem;
+
+                @include mix.tab {
+                    margin-left: 32px;
+                    font-size: 1.3rem;
+                }
+
+                @include mix.sp {
+                    display: none;
+                }
             }
         }
 
         .header__btn {
             height: 64px;
             display: flex;
-
             a {
                 display: inline-block;
                 margin-right: 10px;
@@ -38,36 +59,3 @@
         }
     }
 }
-
-// #header {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     z-index: 99;
-//     width: 100%;
-// }
-// .header__container {
-//     display: flex;
-//     max-width: 1280px;
-//     margin: 0 auto;
-//     padding-top: 42px;
-//     padding-bottom: 22px;
-//     color: #E6C570;
-//     justify-content: space-between;
-// }
-// #header .header__logo-time span {
-//     display: inline-block;
-//     margin-left: 42px;
-//     line-height: 1.5;
-//     font-size: 1.5rem;
-// }
-
-// #header .header__btn {
-//     height: 64px;
-//     display: flex;
-// }
-
-// #header .header__btn a {
-//     display: inline-block;
-//     margin-right: 10px;
-// }

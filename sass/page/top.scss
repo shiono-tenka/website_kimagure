@@ -1,7 +1,8 @@
 // TOPページ専用のスタイル
+@use '../base/mixin' as mix;
+@use '../base/variables' as var;
+
 /* ヒーローエリア--------------------- */
-
-
 .hero {
     color: #E6C570;
     display: flex;
