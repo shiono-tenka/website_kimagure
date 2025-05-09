@@ -54,7 +54,7 @@
     /* アニメーション部分 */
     pointer-events: none;
     opacity: 0;
-    transition: opacity .5s linear;
+    transition: none;
 
     &--logo {
         max-width: 60%;
@@ -97,6 +97,7 @@
     &.active {
         pointer-events: auto;
         opacity: 1;
+        transition: opacity 0.3s linear;
     }
 
     &--contact {
