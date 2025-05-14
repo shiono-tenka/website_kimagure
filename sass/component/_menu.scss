@@ -111,7 +111,7 @@
             color: #E6C570;
         }
 
-        .tel {
+        &-tel {
             a {
                 &::before {
                     content: url(../img/top/tel.png);
@@ -120,7 +120,7 @@
                 }
             }
         }
-        .mail {
+        &-mail {
             a {
                 &::before {
                     content: url(../img/top/contact.png);

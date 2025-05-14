@@ -23,26 +23,22 @@ html,
 body {
     font-size: 100%;
     @include mix.sp {
-        font-size: 120%;
+        font-size: 85%;
     }
-    font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;
-    /* サイト全体で使うフォント */
+    @include mix.bizGothic;
     line-height: 1.5;
     color: var.$pastelYellow;
-    /* 基本の文字色 */
     background-color: var.$baseBlue;
-    /* 基本の背景色 */
 }
 
 #header {
-    background-color: #304374;
+    background-color: var.$baseBlue;
 }
 
-.en-txt {
-    font-family: "Poppins", sans-serif;
+.en__txt {
+    @include mix.poppins;
 }
 
 .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
+    @include mix.wrapperWidth;
 }

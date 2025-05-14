@@ -20,17 +20,16 @@ html,
 body {
   font-size: 100%;
   font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;
-  /* サイト全体で使うフォント */
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
   color: #FFF9EB;
-  /* 基本の文字色 */
   background-color: #304374;
-  /* 基本の背景色 */
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
   html,
   body {
-    font-size: 120%;
+    font-size: 85%;
   }
 }
 
@@ -38,13 +37,20 @@ body {
   background-color: #304374;
 }
 
-.en-txt {
+.en__txt {
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .wrapper {
+    max-width: 336px;
+  }
 }
 
 .sec__title {
@@ -227,12 +233,12 @@ body {
 .header__hamburger-content--contact a {
   color: #E6C570;
 }
-.header__hamburger-content--contact .tel a::before {
+.header__hamburger-content--contact-tel a::before {
   content: url(../img/top/tel.png);
   padding-right: 8px;
   vertical-align: sub;
 }
-.header__hamburger-content--contact .mail a::before {
+.header__hamburger-content--contact-mail a::before {
   content: url(../img/top/contact.png);
   padding-right: 8px;
   vertical-align: sub;
