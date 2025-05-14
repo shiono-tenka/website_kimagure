@@ -37,16 +37,6 @@ body {
 #header {
   background-color: #304374;
 }
-@media screen and (min-width: 768px) and (max-width: 1500px) {
-  html, body {
-    font-size: 80%;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  html, body {
-    font-size: 70%;
-  }
-}
 
 .en-txt {
   font-family: "Poppins", sans-serif;
@@ -55,304 +45,6 @@ body {
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-}
-
-.sec__title {
-  display: inline-block;
-  font-family: "BIZ UDMincho", Times, serif;
-  font-size: 2rem;
-  border-bottom: solid 1px #FFF9EB;
-  padding-bottom: 8px;
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-
-.season-triangle {
-  position: absolute;
-  top: 30px;
-  right: 75px;
-  width: 0;
-  height: 0;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 10px solid #FFF9EB;
-}
-
-.Morning-triangle {
-  position: absolute;
-  top: 30px;
-  right: 70px;
-  width: 0;
-  height: 0;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 10px solid #FFF9EB;
-}
-
-.Cafe-triangle {
-  position: absolute;
-  top: 30px;
-  right: 85px;
-  width: 0;
-  height: 0;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 10px solid #FFF9EB;
-}
-
-.Takeout-triangle {
-  position: absolute;
-  top: 30px;
-  right: 65px;
-  width: 0;
-  height: 0;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 10px solid #FFF9EB;
-}
-
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-}
-#header .header__container {
-  display: flex;
-  width: 85%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-top: 42px;
-  padding-bottom: 22px;
-  color: #E6C570;
-  justify-content: space-between;
-}
-@media screen and (min-width: 768px) and (max-width: 1500px) {
-  #header .header__container {
-    width: 85%;
-    padding-top: 36px;
-    padding-bottom: 18px;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  #header .header__container {
-    width: 70%;
-    padding-top: 24px;
-    padding-bottom: 16px;
-  }
-}
-#header .header__container .header__logo-time span {
-  display: inline-block;
-  margin-left: 42px;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 768px) and (max-width: 1500px) {
-  #header .header__container .header__logo-time span {
-    margin-left: 32px;
-    font-size: 1.3rem;
-  }
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  #header .header__container .header__logo-time span {
-    display: none;
-  }
-}
-#header .header__container .header__btn {
-  height: 64px;
-  display: flex;
-}
-#header .header__container .header__btn a {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.hamburger {
-  width: 64px;
-  height: 64px;
-  background-color: #1E2B4C;
-  border-radius: 50%;
-  position: relative;
-  z-index: 20;
-  cursor: pointer;
-}
-.hamburger span {
-  width: 35px;
-  height: 2px;
-  display: inline-block;
-  background-color: #F1D99E;
-  position: absolute;
-  left: 15px;
-  border-radius: 1px;
-  transition: all 0.4s;
-}
-.hamburger span:nth-of-type(1) {
-  top: 24px;
-}
-.hamburger span:nth-of-type(2) {
-  bottom: 24px;
-}
-.hamburger.active span:nth-of-type(1) {
-  top: 32px;
-  transform: rotate(-45deg);
-}
-.hamburger.active span:nth-of-type(2) {
-  top: 32px;
-  transform: rotate(45deg);
-}
-
-.header__hamburger-content {
-  width: 49%;
-  height: 100vh;
-  background-color: #1E2B4C;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  /* アニメーション部分 */
-  pointer-events: none;
-  opacity: 0;
-  transition: none;
-}
-.header__hamburger-content--logo {
-  max-width: 60%;
-  margin: 0 auto;
-  padding-top: 44px;
-  padding-bottom: 22px;
-}
-.header__hamburger-content--logo span {
-  display: inline-block;
-  vertical-align: 100%;
-  margin-left: 32px;
-  line-height: 1.5;
-  font-size: 0.8rem;
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  .header__hamburger-content--logo {
-    max-width: 90%;
-    padding-top: 24px;
-    padding-bottom: 16px;
-  }
-  .header__hamburger-content--logo span {
-    margin-left: 20px;
-    font-size: 0.7rem;
-  }
-}
-.header__hamburger-content--menu {
-  width: 27%;
-  position: absolute;
-  top: 50%;
-  /*親のtopから50%*/
-  left: 50%;
-  /*親のleftから50%*/
-  transform: translateY(-45%) translateX(-50%);
-  /*子要素自体の大きさを考慮*/
-  margin: auto;
-}
-.header__hamburger-content--menu a {
-  color: #E6C570;
-  font-size: 1.5rem;
-  font-family: "BIZ UDMincho", Times, serif;
-}
-.header__hamburger-content--menu li {
-  margin-bottom: 32px;
-  padding: 10px;
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  .header__hamburger-content--menu {
-    width: 70%;
-  }
-  .header__hamburger-content--menu a {
-    font-size: 1.2rem;
-  }
-  .header__hamburger-content--menu li {
-    margin-bottom: 24px;
-    padding: 8px;
-  }
-}
-.header__hamburger-content.active {
-  pointer-events: auto;
-  opacity: 1;
-  transition: opacity 0.3s linear;
-}
-.header__hamburger-content--contact {
-  line-height: 2;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-60%);
-}
-.header__hamburger-content--contact a {
-  color: #E6C570;
-}
-.header__hamburger-content--contact .tel a::before {
-  content: url(../img/top/tel.png);
-  padding-right: 8px;
-  vertical-align: sub;
-}
-.header__hamburger-content--contact .mail a::before {
-  content: url(../img/top/contact.png);
-  padding-right: 8px;
-  vertical-align: sub;
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  .header__hamburger-content--contact {
-    line-height: 1.8;
-    font-size: 0.9rem;
-    bottom: 4%;
-  }
-}
-.header__hamburger-content a:hover {
-  opacity: 0.7;
-}
-
-.footer {
-  color: #E6C570;
-}
-.footer__navi {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  display: flex;
-}
-.footer__navi li {
-  margin-right: 40px;
-}
-.footer__navi a {
-  padding-bottom: 8px;
-  color: #E6C570;
-  position: relative;
-}
-.footer__navi a::after {
-  position: absolute;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #E6C570;
-  bottom: -1px;
-  transform: scale(0, 1);
-  transform-origin: center top;
-  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-  transition: transform 0.3s;
-  /*変形の時間*/
-}
-.footer__navi a:hover::after {
-  transform: scale(1, 1);
-  /*ホバー後、x軸方向に1（相対値）伸長*/
-}
-.footer__logo {
-  text-align: center;
-}
-.footer__logo img {
-  display: inline-block;
-  width: 20%;
-  margin-bottom: 100px;
-}
-.footer small {
-  display: block;
-  text-align: end;
-  margin-bottom: 30px;
 }
 
 /* ヒーローエリア--------------------- */
@@ -761,4 +453,312 @@ body {
 .aside__store-info--title {
   text-align: center;
   font-size: 1.25rem;
+}
+
+.sec__title {
+  display: inline-block;
+  font-family: "BIZ UDMincho", Times, serif;
+  font-size: 2rem;
+  border-bottom: solid 1px #FFF9EB;
+  padding-bottom: 8px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.season-triangle {
+  position: absolute;
+  top: 30px;
+  right: 75px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Morning-triangle {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Cafe-triangle {
+  position: absolute;
+  top: 30px;
+  right: 85px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Takeout-triangle {
+  position: absolute;
+  top: 30px;
+  right: 65px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+#header .header__container {
+  display: flex;
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 22px;
+  color: #E6C570;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  #header .header__container {
+    width: 85%;
+    padding-top: 36px;
+    padding-bottom: 18px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container {
+    width: 70%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+}
+#header .header__container .header__logo-time span {
+  display: inline-block;
+  margin-left: 42px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  #header .header__container .header__logo-time span {
+    margin-left: 32px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container .header__logo-time span {
+    display: none;
+  }
+}
+#header .header__container .header__btn {
+  height: 64px;
+  display: flex;
+}
+#header .header__container .header__btn a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.hamburger {
+  width: 64px;
+  height: 64px;
+  background-color: #1E2B4C;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 35px;
+  height: 2px;
+  display: inline-block;
+  background-color: #F1D99E;
+  position: absolute;
+  left: 15px;
+  border-radius: 1px;
+  transition: all 0.4s;
+}
+.hamburger span:nth-of-type(1) {
+  top: 24px;
+}
+.hamburger span:nth-of-type(2) {
+  bottom: 24px;
+}
+.hamburger.active span:nth-of-type(1) {
+  top: 32px;
+  transform: rotate(-45deg);
+}
+.hamburger.active span:nth-of-type(2) {
+  top: 32px;
+  transform: rotate(45deg);
+}
+
+.header__hamburger-content {
+  width: 49%;
+  height: 100vh;
+  background-color: #1E2B4C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* アニメーション部分 */
+  pointer-events: none;
+  opacity: 0;
+  transition: none;
+}
+.header__hamburger-content--logo {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 22px;
+}
+.header__hamburger-content--logo span {
+  display: inline-block;
+  vertical-align: 100%;
+  margin-left: 32px;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo {
+    max-width: 90%;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .header__hamburger-content--logo span {
+    margin-left: 20px;
+    font-size: 0.7rem;
+  }
+}
+.header__hamburger-content--menu {
+  width: 27%;
+  position: absolute;
+  top: 50%;
+  /*親のtopから50%*/
+  left: 50%;
+  /*親のleftから50%*/
+  transform: translateY(-45%) translateX(-50%);
+  /*子要素自体の大きさを考慮*/
+  margin: auto;
+}
+.header__hamburger-content--menu a {
+  color: #E6C570;
+  font-size: 1.5rem;
+  font-family: "BIZ UDMincho", Times, serif;
+}
+.header__hamburger-content--menu li {
+  margin-bottom: 32px;
+  padding: 10px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--menu {
+    width: 70%;
+  }
+  .header__hamburger-content--menu a {
+    font-size: 1.2rem;
+  }
+  .header__hamburger-content--menu li {
+    margin-bottom: 24px;
+    padding: 8px;
+  }
+}
+.header__hamburger-content.active {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+.header__hamburger-content--contact {
+  line-height: 2;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-60%);
+}
+.header__hamburger-content--contact a {
+  color: #E6C570;
+}
+.header__hamburger-content--contact .tel a::before {
+  content: url(../img/top/tel.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+.header__hamburger-content--contact .mail a::before {
+  content: url(../img/top/contact.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--contact {
+    line-height: 1.8;
+    font-size: 0.9rem;
+    bottom: 4%;
+  }
+}
+.header__hamburger-content a:hover {
+  opacity: 0.7;
+}
+
+.menu-top.active {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.menu-concept.active {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.footer {
+  color: #E6C570;
+}
+.footer__navi {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+}
+.footer__navi li {
+  margin-right: 40px;
+}
+.footer__navi a {
+  padding-bottom: 8px;
+  color: #E6C570;
+  position: relative;
+}
+.footer__navi a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #E6C570;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+  transition: transform 0.3s;
+  /*変形の時間*/
+}
+.footer__navi a:hover::after {
+  transform: scale(1, 1);
+  /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+.footer__logo {
+  text-align: center;
+}
+.footer__logo img {
+  display: inline-block;
+  width: 20%;
+  margin-bottom: 100px;
+}
+.footer small {
+  display: block;
+  text-align: end;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */
