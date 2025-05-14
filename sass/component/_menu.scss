@@ -58,11 +58,6 @@
     opacity: 0;
     transition: none;
 
-    @include mix.sp {
-        width: 100%;
-        padding: 0 16px;
-      }
-
     &--logo {
         max-width: 60%;
         margin: 0 auto;
