@@ -20,7 +20,7 @@
   }
 }
 
-// 横幅の指定変更（後でメディアクエリの制御を行うときも一括で管理可能？？）
+// 横幅の指定変更（後でメディアクエリの制御を行うときも一括で管理可能）
 @mixin wrapperWidth ($pc: 1024px, $sp: 336px) {
   max-width: $pc;
   margin: 0 auto;
@@ -58,19 +58,13 @@
 }
 
 // MV用テキストシャドウ
-@mixin M-textShadow($transparent) {
-  text-shadow: 0px 0px 25px 4px rgba(162, 135, 66, $transparent);
+@mixin MV-textShadow($transparent) {
+  filter: drop-shadow(0 0 25px rgba(162, 135, 66, $transparent));
 }
 
 //   Cobcept用テキストシャドウ
 @mixin C-textShadow($transparent) {
-  text-shadow: 0px 0px 25px 0px rgba(30, 43, 76, $transparent);
-}
-
-// セクション間のスペース   
-@mixin sectionSpacing {
-  max-width: 1024px;
-  margin: var.$mgLarge auto 0;
+  filter: drop-shadow(0 0 25px rgba(30, 43, 76, $transparent));
 }
 
 //   セクションタイトル
@@ -93,15 +87,3 @@
     color: $bgColor;
   }
 }
-
-// 三角形のインジケーター
-// @mixin triangle-indicator($right) {
-//   position: absolute;
-//   top: 30px;
-//   right: $right;
-//   width: 0;
-//   height: 0;
-//   border-right: 5px solid transparent;
-//   border-left: 5px solid transparent;
-//   border-top: 10px solid #FFF9EB;
-// }

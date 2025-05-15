@@ -123,11 +123,21 @@ body {
   color: #E6C570;
   justify-content: space-between;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container {
+    max-width: 80%;
+  }
+}
 #header .header__container .header__logo-time span {
   display: inline-block;
   margin-left: 42px;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container .header__logo-time span {
+    display: none;
+  }
 }
 #header .header__container .header__btn {
   height: 64px;
@@ -151,7 +161,7 @@ body {
   width: 35px;
   height: 2px;
   display: inline-block;
-  background-color: #F1D99E;
+  background-color: #E6C570;
   position: absolute;
   left: 15px;
   border-radius: 1px;
@@ -185,11 +195,21 @@ body {
   opacity: 0;
   transition: none;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content {
+    width: 100%;
+  }
+}
 .header__hamburger-content--logo {
   max-width: 60%;
   margin: 0 auto;
   padding-top: 44px;
   padding-bottom: 22px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo {
+    max-width: 80%;
+  }
 }
 .header__hamburger-content--logo span {
   display: inline-block;
@@ -197,6 +217,13 @@ body {
   margin-left: 42px;
   line-height: 1.5;
   font-size: 0.8rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo span {
+    vertical-align: 10px;
+    margin-left: 15%;
+    font-size: 1.2rem;
+  }
 }
 .header__hamburger-content--menu {
   width: 27%;
@@ -303,8 +330,8 @@ body {
 }
 .hero__txt {
   width: 40%;
-  margin-left: 230px;
-  margin-top: 320px;
+  margin-left: 15%;
+  margin-top: 21%;
   position: relative;
   z-index: 1;
 }
@@ -313,7 +340,7 @@ body {
   font-size: 2.5rem;
   letter-spacing: 0.01em;
   line-height: 1.5;
-  filter: drop-shadow(0 0 25px #A28742);
+  filter: drop-shadow(0 0 25px rgb(162, 135, 66));
   margin-bottom: 25px;
 }
 .hero__txt-en {
@@ -326,7 +353,7 @@ body {
 }
 .hero__img {
   width: 60%;
-  margin: 230px 0 230px 66px;
+  margin: 15% 0 15% 4.4%;
 }
 
 /* コンセプト------------------------ */
@@ -355,7 +382,7 @@ body {
   margin-left: 9%;
   line-height: 1.8;
   letter-spacing: 0.1em;
-  filter: drop-shadow(0 0 25px #1E2B4C);
+  filter: drop-shadow(0 0 25px rgb(30, 43, 76));
 }
 
 /* メニュー--------------------------- */
@@ -367,7 +394,6 @@ body {
   border-bottom: solid 1px #1E2B4C;
 }
 .menu__tabs {
-  margin-top: 50px;
   background-color: #FFF9EB;
   width: 1024px;
   margin: 0 auto;
@@ -416,7 +442,6 @@ body {
   object-fit: cover;
 }
 .menu__content--flexitem div {
-  text-align: center;
   margin: 40px auto;
   text-align: center;
   line-height: 1.5;
@@ -453,14 +478,14 @@ body {
   position: relative;
 }
 .info__content {
-  width: 600px;
-  margin-left: 423px;
+  width: 58.6%;
+  margin-left: 41.3%;
 }
 .info__content--img {
   margin-bottom: 20px;
 }
 .info__content--txt {
-  width: 600px;
+  width: 100%;
   text-align: center;
   border-bottom: solid 1px #FFF9EB;
   padding-top: 20px;
@@ -696,7 +721,7 @@ body {
   margin-bottom: 100px;
 }
 .aside__baner img {
-  box-shadow: 6px 6px 30px rgba(230, 197, 112, 0.8);
+  box-shadow: 6px 6px 30px 0px rgba(230, 197, 112, 0.8);
 }
 .aside__store-info--title {
   text-align: center;
