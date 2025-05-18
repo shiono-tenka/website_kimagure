@@ -116,17 +116,12 @@ body {
 }
 #header .header__container {
   display: flex;
-  max-width: 1280px;
+  max-width: 83%;
   margin: 0 auto;
   padding-top: 42px;
   padding-bottom: 22px;
   color: #E6C570;
   justify-content: space-between;
-}
-@media screen and (min-width: 0px) and (max-width: 480px) {
-  #header .header__container {
-    max-width: 80%;
-  }
 }
 #header .header__container .header__logo-time span {
   display: inline-block;
