@@ -20,17 +20,16 @@ html,
 body {
   font-size: 100%;
   font-family: "BIZ UDPGothic", "Yu Gothic", メイリオ, Meiryo, Arial, sans-serif;
-  /* サイト全体で使うフォント */
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
   color: #FFF9EB;
-  /* 基本の文字色 */
   background-color: #304374;
-  /* 基本の背景色 */
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
   html,
   body {
-    font-size: 120%;
+    font-size: 85%;
   }
 }
 
@@ -38,13 +37,284 @@ body {
   background-color: #304374;
 }
 
-.en-txt {
+.en__txt {
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .wrapper {
+    max-width: 336px;
+  }
+}
+
+.sec__title {
+  display: inline-block;
+  font-family: "BIZ UDMincho", Times, serif;
+  font-size: 2rem;
+  border-bottom: solid 1px #FFF9EB;
+  padding-bottom: 8px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.season-triangle {
+  position: absolute;
+  top: 30px;
+  right: 75px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Morning-triangle {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Cafe-triangle {
+  position: absolute;
+  top: 30px;
+  right: 85px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+.Takeout-triangle {
+  position: absolute;
+  top: 30px;
+  right: 65px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 10px solid #FFF9EB;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+#header .header__container {
+  display: flex;
+  max-width: 83%;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 22px;
+  color: #E6C570;
+  justify-content: space-between;
+}
+#header .header__container .header__logo-time span {
+  display: inline-block;
+  margin-left: 42px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  #header .header__container .header__logo-time span {
+    display: none;
+  }
+}
+#header .header__container .header__btn {
+  height: 64px;
+  display: flex;
+}
+#header .header__container .header__btn a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.hamburger {
+  width: 64px;
+  height: 64px;
+  background-color: #1E2B4C;
+  border-radius: 50%;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 35px;
+  height: 2px;
+  display: inline-block;
+  background-color: #E6C570;
+  position: absolute;
+  left: 15px;
+  border-radius: 1px;
+  transition: all 0.4s;
+}
+.hamburger span:nth-of-type(1) {
+  top: 24px;
+}
+.hamburger span:nth-of-type(2) {
+  bottom: 24px;
+}
+.hamburger.active span:nth-of-type(1) {
+  top: 32px;
+  transform: rotate(-45deg);
+}
+.hamburger.active span:nth-of-type(2) {
+  top: 32px;
+  transform: rotate(45deg);
+}
+
+.header__hamburger-content {
+  width: 49%;
+  height: 100vh;
+  background-color: #1E2B4C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* アニメーション部分 */
+  pointer-events: none;
+  opacity: 0;
+  transition: none;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content {
+    width: 100%;
+  }
+}
+.header__hamburger-content--logo {
+  max-width: 60%;
+  margin: 0 auto;
+  padding-top: 44px;
+  padding-bottom: 22px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo {
+    max-width: 80%;
+  }
+}
+.header__hamburger-content--logo span {
+  display: inline-block;
+  vertical-align: 16px;
+  margin-left: 42px;
+  line-height: 1.5;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--logo span {
+    vertical-align: 10px;
+    margin-left: 15%;
+    font-size: 1.2rem;
+  }
+}
+.header__hamburger-content--menu {
+  width: 27%;
+  position: absolute;
+  top: 50%;
+  /*親のtopから50%*/
+  left: 50%;
+  /*親のleftから50%*/
+  transform: translateY(-45%) translateX(-50%);
+  /*子要素自体の大きさを考慮*/
+  margin: auto;
+}
+.header__hamburger-content--menu a {
+  color: #E6C570;
+  font-size: 1.5rem;
+  font-family: "BIZ UDMincho", Times, serif;
+}
+.header__hamburger-content--menu li {
+  margin-bottom: 32px;
+  padding: 10px;
+}
+.header__hamburger-content.active {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+.header__hamburger-content--contact {
+  line-height: 2;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__hamburger-content--contact a {
+  color: #E6C570;
+}
+.header__hamburger-content--contact-tel a::before {
+  content: url(../img/top/tel.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+.header__hamburger-content--contact-mail a::before {
+  content: url(../img/top/contact.png);
+  padding-right: 8px;
+  vertical-align: sub;
+}
+.header__hamburger-content a:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  color: #E6C570;
+}
+.footer__navi {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+}
+.footer__navi li {
+  margin-right: 40px;
+}
+.footer__navi a {
+  padding-bottom: 8px;
+  color: #E6C570;
+  position: relative;
+}
+.footer__navi a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #E6C570;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+  transition: transform 0.3s;
+  /*変形の時間*/
+}
+.footer__navi a:hover::after {
+  transform: scale(1, 1);
+  /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+.footer__logo {
+  text-align: center;
+}
+.footer__logo img {
+  display: inline-block;
+  width: 20%;
+  margin-bottom: 100px;
+}
+.footer small {
+  display: block;
+  text-align: end;
+  margin-bottom: 30px;
 }
 
 /* ヒーローエリア--------------------- */
@@ -55,8 +325,8 @@ body {
 }
 .hero__txt {
   width: 40%;
-  margin-left: 230px;
-  margin-top: 320px;
+  margin-left: 15%;
+  margin-top: 21%;
   position: relative;
   z-index: 1;
 }
@@ -65,7 +335,7 @@ body {
   font-size: 2.5rem;
   letter-spacing: 0.01em;
   line-height: 1.5;
-  filter: drop-shadow(0 0 25px #A28742);
+  filter: drop-shadow(0 0 25px rgb(162, 135, 66));
   margin-bottom: 25px;
 }
 .hero__txt-en {
@@ -78,7 +348,7 @@ body {
 }
 .hero__img {
   width: 60%;
-  margin: 230px 0 230px 66px;
+  margin: 15% 0 15% 4.4%;
 }
 
 /* コンセプト------------------------ */
@@ -107,7 +377,7 @@ body {
   margin-left: 9%;
   line-height: 1.8;
   letter-spacing: 0.1em;
-  filter: drop-shadow(0 0 25px #1E2B4C);
+  filter: drop-shadow(0 0 25px rgb(30, 43, 76));
 }
 
 /* メニュー--------------------------- */
@@ -119,7 +389,6 @@ body {
   border-bottom: solid 1px #1E2B4C;
 }
 .menu__tabs {
-  margin-top: 50px;
   background-color: #FFF9EB;
   width: 1024px;
   margin: 0 auto;
@@ -168,7 +437,6 @@ body {
   object-fit: cover;
 }
 .menu__content--flexitem div {
-  text-align: center;
   margin: 40px auto;
   text-align: center;
   line-height: 1.5;
@@ -205,14 +473,14 @@ body {
   position: relative;
 }
 .info__content {
-  width: 600px;
-  margin-left: 423px;
+  width: 58.6%;
+  margin-left: 41.3%;
 }
 .info__content--img {
   margin-bottom: 20px;
 }
 .info__content--txt {
-  width: 600px;
+  width: 100%;
   text-align: center;
   border-bottom: solid 1px #FFF9EB;
   padding-top: 20px;
@@ -448,7 +716,7 @@ body {
   margin-bottom: 100px;
 }
 .aside__baner img {
-  box-shadow: 6px 6px 30px rgba(230, 197, 112, 0.8);
+  box-shadow: 6px 6px 30px 0px rgba(230, 197, 112, 0.8);
 }
 .aside__store-info--title {
   text-align: center;

@@ -1,17 +1,19 @@
+@use '../base/variables' as var;
+@use '../base/mixin' as mix;
 // TOPページ専用のスタイル
 @use '../base/mixin' as mix;
 @use '../base/variables' as var;
 
 /* ヒーローエリア--------------------- */
 .hero {
-    color: #E6C570;
+    color: var.$yellow;
     display: flex;
     justify-content: end;
 
     &__txt {
         width: 40%;
-        margin-left: 230px;
-        margin-top: 320px;
+        margin-left: 15%;
+        margin-top: 21%;
         position: relative;
         z-index: 1;
 
@@ -20,7 +22,7 @@
             font-size: 2.5rem;
             letter-spacing: 0.01em;
             line-height: 1.5;
-            filter: drop-shadow(0 0 25px #A28742);
+            @include mix.MV-textShadow(1); 
             margin-bottom: 25px;
         }
 
@@ -37,41 +39,9 @@
 
     &__img {
         width: 60%;
-        margin: 230px 0 230px 66px;
+        margin: 15% 0 15% 4.4%;
     }
 }
-
-// .hero__img {
-//     width: 60%;
-//     margin: 230px 0 230px 66px;
-// }
-
-// .hero__txt {
-//     width: 40%;
-//     margin-left: 230px;
-//     margin-top: 320px;
-//     position: relative;
-//     z-index: 1;
-// }
-
-// .hero__txt-ja {
-//     font-family: "BIZ UDMincho", serif;
-//     font-size: 2.5rem;
-//     letter-spacing: 0.01em;
-//     line-height: 1.5;
-//     filter: drop-shadow(0 0 25px #A28742);
-//     margin-bottom: 25px;
-// }
-
-// .hero__txt-en {
-//     letter-spacing: 0.1em;
-//     line-height: 1.5;
-//     opacity: .5;
-// }
-
-// .hero__txt-en span {
-//     font-size: 1.5rem;
-// }
 
 /* コンセプト------------------------ */
 .concept {
@@ -79,7 +49,7 @@
 
     &__bg {
         position: absolute;
-        top: 100px;
+        top: (var.$mgLarge / 2);
         left: 0;
     }
 
@@ -89,80 +59,46 @@
     }
 
     &__title {
-        padding-top: 100px;
+        padding-top: (var.$mgLarge / 2);
     }
 
     &__container {
         display: flex;
-        margin-bottom: 100px;
+        margin-bottom: (var.$mgLarge / 2);
 
         &--txt {
             width: 390px;
-            margin-top: 80px;
+            margin-top: (var.$mgMedium * 2);
             margin-left: 9%;
             line-height: 1.8;
             letter-spacing: 0.1em;
-            filter: drop-shadow(0 0 25px #1E2B4C);
+            @include mix.C-textShadow(1)
         }
     }
 }
 
-// #concept {
-//     position: relative;
-// }
-
-// #concept .concept__bg {
-//     position: absolute;
-//     top: 100px;
-//     left: 0;
-// }
-
-// .concept__wrapper {
-//     z-index: 1;
-//     position: relative;
-// }
-
-// #concept .concept__title {
-//     padding-top: 100px;
-// }
-
-// #concept .concept__container {
-//     margin-bottom: 100px;
-//     display: flex;
-// }
-
-// #concept .concept__container--txt {
-//     width: 390px;
-//     margin-top: 80px;
-//     margin-left: 9%;
-//     line-height: 1.8;
-//     letter-spacing: 0.1em;
-//     filter: drop-shadow(0 0 25px #1E2B4C);
-// }
-
 /* メニュー--------------------------- */
 .menu {
-    background-color: #FFF9EB;
-    color: #1E2B4C;
+    background-color: var.$pastelYellow;
+    color: var.$mainBlue;
 
     &__title {
-        border-bottom: solid 1px #1E2B4C;
+        border-bottom: solid 1px var.$mainBlue;
     }
 
     &__tabs {
-        margin-top: 50px;
-        background-color: #FFF9EB;
+        background-color: var.$pastelYellow;
         width: 1024px;
         margin: 0 auto;
 
         &-item {
             width: calc(100%/4);
             height: 67px;
-            background-color: #1E2B4C;
+            background-color: var.$mainBlue;
             line-height: 67px;
             font-size: 16px;
             text-align: center;
-            color: #FFF9EB;
+            color: var.$pastelYellow;
             display: block;
             float: left;
             text-align: center;
@@ -182,20 +118,20 @@
 
         input:checked {
             +.menu__tabs-item {
-                background-color: #304374;
-                color: #FFF9EB;
+                background-color: var.$baseBlue;
+                color: var.$pastelYellow;
             }
         }
     }
 
     &__content {
         display: none;
-        padding-top: 40px;
+        padding-top: var.$mgMedium;
         clear: both;
         overflow: hidden;
 
         &--flexbox {
-            margin-bottom: 100px;
+            margin-bottom: (var.$mgLarge / 2);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -208,8 +144,7 @@
                 object-fit: cover;
             }
             div {
-                text-align: center;
-                margin: 40px auto;
+                margin: var.$mgMedium auto;
                 text-align: center;
                 line-height: 1.5;
             }
@@ -231,140 +166,6 @@
     display: block;
 }
 
-// #menu {
-//     background-color: #FFF9EB;
-//     color: #1E2B4C;
-// }
-
-// #menu .menu__title {
-//     border-bottom: solid 1px #1E2B4C;
-// }
-
-// .menu__tabs {
-//     margin-top: 50px;
-//     background-color: #FFF9EB;
-//     width: 1024px;
-//     margin: 0 auto;
-
-// }
-
-// .menu__tabs-item {
-// width: calc(100%/4);
-// height: 67px;
-// background-color: #1E2B4C;
-// line-height: 67px;
-// font-size: 16px;
-// text-align: center;
-// color: #FFF9EB;
-// display: block;
-// float: left;
-// text-align: center;
-// font-weight: bold;
-// transition: all 0.2s ease;
-// position: relative;
-// cursor: pointer;
-// }
-
-// .menu__tabs-item:hover {
-//     opacity: 0.75;
-// }
-
-// input[name="menu__tabs-item"] {
-//     display: none;
-// }
-
-// .menu__content {
-// display: none;
-// padding-top: 40px;
-// clear: both;
-// overflow: hidden;
-// }
-
-// /*選択されているタブのコンテンツのみを表示*/
-// #season:checked~#season_content,
-// #Morning:checked~#Morning_content,
-// #Cafe:checked~#Cafe_content,
-// #Takeout:checked~#Takeout_content {
-//     display: block;
-// }
-
-// .menu__tabs input:checked+.menu__tabs-item {
-//     background-color: #304374;
-//     color: #FFF9EB;
-// }
-
-// .season-triangle {
-//     position: absolute;
-//     top: 30px;
-//     right: 75px;
-//     width: 0;
-//     height: 0;
-//     border-right: 5px solid transparent;
-//     border-left: 5px solid transparent;
-//     border-top: 10px solid #FFF9EB;
-// }
-
-// .Morning-triangle {
-//     position: absolute;
-//     top: 30px;
-//     right: 70px;
-//     width: 0;
-//     height: 0;
-//     border-right: 5px solid transparent;
-//     border-left: 5px solid transparent;
-//     border-top: 10px solid #FFF9EB;
-// }
-
-// .Cafe-triangle {
-//     position: absolute;
-//     top: 30px;
-//     right: 85px;
-//     width: 0;
-//     height: 0;
-//     border-right: 5px solid transparent;
-//     border-left: 5px solid transparent;
-//     border-top: 10px solid #FFF9EB;
-// }
-
-// .Takeout-triangle {
-//     position: absolute;
-//     top: 30px;
-//     right: 65px;
-//     width: 0;
-//     height: 0;
-//     border-right: 5px solid transparent;
-//     border-left: 5px solid transparent;
-//     border-top: 10px solid #FFF9EB;
-// }
-
-// .menu__content--flexbox {
-// margin-bottom: 100px;
-// display: flex;
-// flex-wrap: wrap;
-// justify-content: space-between;
-// }
-
-// .menu__content--flexitem img {
-// width: 480px;
-// height: 270px;
-// object-fit: cover;
-// }
-
-// .menu__content--flexitem div {
-    // text-align: center;
-    // margin: 40px auto;
-    // text-align: center;
-    // line-height: 1.5;
-// }
-
-// .menu__txt-title {
-//     font-size: 1.25rem;
-//     margin-bottom: 16px;
-// }
-
-// .menu__txt-title span {
-//     float: right;
-// }
 
 /* インフォメーション--------------------------- */
 .info {
@@ -372,7 +173,7 @@
     &__bg {
         width: 85%;
         height: 100%;
-        background-color: #1E2B4C;
+        background-color: var.$mainBlue;
         position: absolute;
         top: 0;
         right: 0;
@@ -382,17 +183,17 @@
         position: relative;
     }
     &__content {
-        width: 600px;
-        margin-left: 423px;
+        width: 58.6%;
+        margin-left: 41.3%;
         &--img {
-            margin-bottom: 20px;
+            margin-bottom: var.$mgSmall;
         }
         &--txt {
-            width: 600px;
+            width: 100%;
             text-align: center;
             border-bottom: solid 1px #FFF9EB;
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: var.$mgSmall;
+            padding-bottom: var.$mgSmall;
             span {
                 float: left;
             }
@@ -401,15 +202,15 @@
             width: 600px;
             text-align: right;
             a {
-                margin-top: 40px;
-                margin-bottom: 100px;
+                margin-top: var.$mgMedium;
+                margin-bottom: (var.$mgLarge / 2);
                 display: inline-block;
-                padding: 20px 114px;
-                background-color: #FFF9EB;
-                color: #1E2B4C;
+                padding: var.$mgSmall 114px;
+                background-color: var.$pastelYellow;
+                color: var.$mainBlue;
                 &::after {
                     content: url(../img/top/info-triangle.png);
-                    margin-left: 10px;
+                    margin-left: var.$mgExtraSmall;
                     display: inline-block;
                     transform: translateY(1px);
                 }
@@ -421,74 +222,13 @@
     }
 }
 
-// #info {
-//     position: relative;
-// }
-
-// #info .info__bg {
-//     width: 85%;
-//     height: 100%;
-//     background-color: #1E2B4C;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-// }
-
-// .info__wrapper {
-//     z-index: 1;
-//     position: relative;
-// }
-
-// .info__content {
-//     width: 600px;
-//     margin-left: 423px;
-// }
-
-// .info__content--img {
-//     margin-bottom: 20px;
-// }
-
-// .info__content--txt {
-//     width: 600px;
-//     text-align: center;
-//     border-bottom: solid 1px #FFF9EB;
-//     padding-top: 20px;
-//     padding-bottom: 20px;
-// }
-
-// .info__content--txt span {
-//     float: left;
-// }
-
-// .info__content--btn {
-//     width: 600px;
-//     text-align: right;
-// }
-
-// .info__content--btn a {
-//     color: #333;
-//     margin-top: 40px;
-//     margin-bottom: 100px;
-//     display: inline-block;
-//     padding: 20px 114px;
-//     background-color: #FFF9EB;
-//     color: #1E2B4C;
-//     text-align: right;
-// }
-
-// .info__content--btn a::after {
-//     content: url(../img/top/info-triangle.png);
-//     margin-left: 10px;
-//     display: inline-block;
-//     transform: translateY(1px);
-// }
 
 /* アクセス----------------------------------- */
 
 .access {
     width: 100%;
     background: url(../img/top/access-bg.png) no-repeat top center/cover;
-    color: #1E2B4C;
+    color: var.$mainBlue;
     &__title {
         border-bottom: solid 1px #1E2B4C;
     }
@@ -499,7 +239,7 @@
             width: 40%;
             position: relative;
             padding-bottom: 35%;
-            margin-bottom: 100px;
+            margin-bottom: (var.$mgLarge / 2);
             height: 0;
             overflow: hidden;
         }

@@ -1,3 +1,4 @@
+@use '../base/mixin' as mix;
 // DETAILページ専用のスタイル
 #main {
     background-color: #FFF9EB;
@@ -81,7 +82,7 @@
     &__baner {
         margin-bottom: 100px;
         img {
-            box-shadow: 6px 6px 30px rgba(230, 197, 112, 0.8);
+            @include mix.boxShadow(0.8);
         }
     }
     &__store-info {
