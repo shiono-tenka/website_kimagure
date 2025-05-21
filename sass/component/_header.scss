@@ -2,7 +2,8 @@
 @use '../base/variables' as var;
 @use '../base/mixin' as mix;
 
-#header {
+.header {
+    background-color: var.$baseBlue;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +11,8 @@
     width: 100%;
 
 
-    .header__container {
+
+    &__container {
         display: flex;
         max-width: 83%;
         margin: 0 auto;
@@ -19,27 +21,49 @@
         color: var.$yellow;
         justify-content: space-between;
 
+        @include mix.sp {
+            max-width: 90%;
+            padding-top: 22px;
+        }
+    }
 
-        .header__logo-time {
-            span {
-                display: inline-block;
-                margin-left: 42px;
-                line-height: 1.5;
-                font-size: 1.5rem;
+    &__logo-time {
+        span {
+            display: inline-block;
+            margin-left: 42px;
+            line-height: 1.5;
+            font-size: 1.5rem;
 
-                @include mix.sp {
-                    display: none;
-                }
+            @include mix.tab {
+                // display: none;
+            }
+
+            @include mix.sp {
+                display: none;
             }
         }
 
-        .header__btn {
-            height: 64px;
-            display: flex;
+        img {
+            @include mix.sp {
+                max-width: 70%;
+            }
+        }
+    }
 
-            a {
-                display: inline-block;
-                margin-right: var.$mgExtraSmall;
+    &__btn {
+        height: 64px;
+        display: flex;
+
+        @include mix.sp {
+            height: 43px;
+        }
+
+        a {
+            display: inline-block;
+            margin-right: var.$mgExtraSmall;
+
+            @include mix.sp {
+                width: 43px;
             }
         }
     }

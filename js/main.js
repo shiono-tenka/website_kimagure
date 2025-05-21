@@ -37,5 +37,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const select = document.getElementById('menu-select');
+    const contents = document.querySelectorAll('.menu__content');
+
+    select.addEventListener('change', function () {
+      // すべてのコンテンツを非表示にする
+      contents.forEach(function (content) {
+        content.style.display = 'none';
+      });
+
+      // 選択されたオプションに対応するコンテンツを表示する
+      const selectedId = this.value + '_content';
+      const selectedContent = document.getElementById(selectedId);
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+      }
+    });
+
+    // 初期表示として、最初のオプションに対応するコンテンツを表示する
+    const initialId = select.value + '_content';
+    const initialContent = document.getElementById(initialId);
+    if (initialContent) {
+      initialContent.style.display = 'block';
+    }
+  });
+
+
+
+
+
 
 

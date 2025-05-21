@@ -33,10 +33,6 @@ body {
   }
 }
 
-#header {
-  background-color: #304374;
-}
-
 .en__txt {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -62,6 +58,17 @@ body {
   margin-top: 100px;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .sec__title {
+    padding-top: 40px;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    border-bottom: none;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+  }
+}
 
 .season-triangle {
   position: absolute;
@@ -73,7 +80,11 @@ body {
   border-left: 5px solid transparent;
   border-top: 10px solid #FFF9EB;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .season-triangle {
+    right: 25px;
+  }
+}
 .Morning-triangle {
   position: absolute;
   top: 30px;
@@ -84,7 +95,11 @@ body {
   border-left: 5px solid transparent;
   border-top: 10px solid #FFF9EB;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .Morning-triangle {
+    right: 20px;
+  }
+}
 .Cafe-triangle {
   position: absolute;
   top: 30px;
@@ -95,7 +110,11 @@ body {
   border-left: 5px solid transparent;
   border-top: 10px solid #FFF9EB;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .Cafe-triangle {
+    right: 35px;
+  }
+}
 .Takeout-triangle {
   position: absolute;
   top: 30px;
@@ -106,15 +125,20 @@ body {
   border-left: 5px solid transparent;
   border-top: 10px solid #FFF9EB;
 }
-
-#header {
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .Takeout-triangle {
+    right: 16px;
+  }
+}
+.header {
+  background-color: #304374;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
 }
-#header .header__container {
+.header__container {
   display: flex;
   max-width: 83%;
   margin: 0 auto;
@@ -123,24 +147,45 @@ body {
   color: #E6C570;
   justify-content: space-between;
 }
-#header .header__container .header__logo-time span {
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__container {
+    max-width: 90%;
+    padding-top: 22px;
+  }
+}
+.header__logo-time span {
   display: inline-block;
   margin-left: 42px;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
-  #header .header__container .header__logo-time span {
+  .header__logo-time span {
     display: none;
   }
 }
-#header .header__container .header__btn {
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__logo-time img {
+    max-width: 70%;
+  }
+}
+.header__btn {
   height: 64px;
   display: flex;
 }
-#header .header__container .header__btn a {
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__btn {
+    height: 43px;
+  }
+}
+.header__btn a {
   display: inline-block;
   margin-right: 10px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__btn a {
+    width: 43px;
+  }
 }
 
 .hamburger {
@@ -152,6 +197,12 @@ body {
   z-index: 20;
   cursor: pointer;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hamburger {
+    width: 43px;
+    height: 43px;
+  }
+}
 .hamburger span {
   width: 35px;
   height: 2px;
@@ -161,6 +212,15 @@ body {
   left: 15px;
   border-radius: 1px;
   transition: all 0.4s;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hamburger span {
+    width: 25px;
+    height: 1px;
+    color: #F1D99E;
+    position: absolute;
+    left: 9px;
+  }
 }
 .hamburger span:nth-of-type(1) {
   top: 24px;
@@ -175,6 +235,16 @@ body {
 .hamburger.active span:nth-of-type(2) {
   top: 32px;
   transform: rotate(45deg);
+}
+.hamburger.active .header__hamburger-content--logo {
+  max-width: 90%;
+  padding-top: 22px;
+}
+.hamburger.active .header__hamburger-content--logo img {
+  max-width: 30%;
+}
+.hamburger.active .header__hamburger-content--logo span {
+  font-size: 0.8rem;
 }
 
 .header__hamburger-content {
@@ -198,12 +268,12 @@ body {
 .header__hamburger-content--logo {
   max-width: 60%;
   margin: 0 auto;
-  padding-top: 44px;
+  padding-top: 22px;
   padding-bottom: 22px;
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
   .header__hamburger-content--logo {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
 .header__hamburger-content--logo span {
@@ -215,8 +285,8 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
   .header__hamburger-content--logo span {
-    vertical-align: 10px;
-    margin-left: 15%;
+    vertical-align: 5px;
+    margin-left: 8%;
     font-size: 1.2rem;
   }
 }
@@ -231,6 +301,11 @@ body {
   /*子要素自体の大きさを考慮*/
   margin: auto;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--menu {
+    top: 45%;
+  }
+}
 .header__hamburger-content--menu a {
   color: #E6C570;
   font-size: 1.5rem;
@@ -240,10 +315,23 @@ body {
   margin-bottom: 32px;
   padding: 10px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--menu li {
+    margin-bottom: 20px;
+  }
+}
 .header__hamburger-content.active {
   pointer-events: auto;
   opacity: 1;
   transition: opacity 0.3s linear;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content.active .header__hamburger-content--logo img {
+    max-width: 30%;
+  }
+  .header__hamburger-content.active .header__hamburger-content--logo span {
+    font-size: 0.8rem;
+  }
 }
 .header__hamburger-content--contact {
   line-height: 2;
@@ -255,10 +343,22 @@ body {
 .header__hamburger-content--contact a {
   color: #E6C570;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--contact-tel a {
+    width: auto;
+    margin: auto;
+  }
+}
 .header__hamburger-content--contact-tel a::before {
   content: url(../img/top/tel.png);
   padding-right: 8px;
   vertical-align: sub;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .header__hamburger-content--contact-mail a {
+    width: auto;
+    margin: auto;
+  }
 }
 .header__hamburger-content--contact-mail a::before {
   content: url(../img/top/contact.png);
@@ -276,6 +376,11 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer__navi {
+    flex-direction: column;
+  }
 }
 .footer__navi li {
   margin-right: 40px;
@@ -323,12 +428,38 @@ body {
   display: flex;
   justify-content: end;
 }
+.hero__img {
+  width: 60%;
+  margin: 15% 0 15% 4.4%;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__img {
+    width: 42%;
+    margin: 40% 0 40% 0;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__img img {
+    width: 200px;
+    height: 323px;
+    object-fit: cover;
+  }
+}
 .hero__txt {
   width: 40%;
   margin-left: 15%;
   margin-top: 21%;
   position: relative;
   z-index: 1;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__txt {
+    width: 55%;
+    margin-top: 70%;
+    position: absolute;
+    top: 0;
+    right: 35%;
+  }
 }
 .hero__txt-ja {
   font-family: "BIZ UDMincho", serif;
@@ -338,17 +469,28 @@ body {
   filter: drop-shadow(0 0 25px rgb(162, 135, 66));
   margin-bottom: 25px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__txt-ja {
+    font-size: 1.5rem;
+  }
+}
 .hero__txt-en {
   letter-spacing: 0.1em;
   line-height: 1.5;
   opacity: 0.5;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__txt-en {
+    font-size: 0.7rem;
+  }
+}
 .hero__txt-en span {
   font-size: 1.5rem;
 }
-.hero__img {
-  width: 60%;
-  margin: 15% 0 15% 4.4%;
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .hero__txt-en span {
+    font-size: 0.9rem;
+  }
 }
 
 /* コンセプト------------------------ */
@@ -360,6 +502,18 @@ body {
   top: 100px;
   left: 0;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__bg {
+    top: 0;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__bg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
 .concept__wrapper {
   position: relative;
   z-index: 1;
@@ -367,9 +521,19 @@ body {
 .concept__title {
   padding-top: 100px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__title {
+    padding-top: 40px;
+  }
+}
 .concept__container {
   display: flex;
   margin-bottom: 100px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__container {
+    flex-direction: column;
+  }
 }
 .concept__container--txt {
   width: 390px;
@@ -378,6 +542,21 @@ body {
   line-height: 1.8;
   letter-spacing: 0.1em;
   filter: drop-shadow(0 0 25px rgb(30, 43, 76));
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__container--txt {
+    width: 100%;
+    margin: 40px auto;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .concept__container--img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }
 
 /* メニュー--------------------------- */
@@ -388,9 +567,14 @@ body {
 .menu__title {
   border-bottom: solid 1px #1E2B4C;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .menu__title {
+    border-bottom: none;
+  }
+}
 .menu__tabs {
   background-color: #FFF9EB;
-  width: 1024px;
+  width: 100%;
   margin: 0 auto;
 }
 .menu__tabs-item {
@@ -431,6 +615,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .menu__content--flexitem {
+    width: 45%;
+  }
+}
 .menu__content--flexitem img {
   width: 480px;
   height: 270px;
@@ -441,12 +630,27 @@ body {
   text-align: center;
   line-height: 1.5;
 }
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .menu__content--flexitem div p {
+    font-size: 0.8rem;
+  }
+}
 .menu__content--flexitem .menu__txt-title {
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .menu__content--flexitem .menu__txt-title {
+    font-size: 1rem;
+  }
+}
 .menu__content--flexitem .menu__txt-title span {
   float: right;
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .menu__content--flexitem .menu__txt-title span {
+    font-size: 0.6rem;
+  }
 }
 
 #season:checked ~ #season_content,
@@ -490,7 +694,6 @@ body {
   float: left;
 }
 .info__content--btn {
-  width: 600px;
   text-align: right;
 }
 .info__content--btn a {
@@ -500,6 +703,11 @@ body {
   padding: 20px 114px;
   background-color: #FFF9EB;
   color: #1E2B4C;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .info__content--btn a {
+    padding: 20px 50px;
+  }
 }
 .info__content--btn a::after {
   content: url(../img/top/info-triangle.png);
