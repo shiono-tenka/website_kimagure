@@ -85,6 +85,7 @@ body {
     right: 25px;
   }
 }
+
 .Morning-triangle {
   position: absolute;
   top: 30px;
@@ -577,6 +578,11 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .menu__tabs {
+    display: none;
+  }
+}
 .menu__tabs-item {
   width: 25%;
   height: 67px;
@@ -658,6 +664,50 @@ body {
 #Cafe:checked ~ #Cafe_content,
 #Takeout:checked ~ #Takeout_content {
   display: block;
+}
+
+@media (max-width: 1500px) {
+  .sp-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .sp-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .sp-menu {
+    display: grid;
+    place-content: center;
+  }
+}
+
+.bl_selectToggle {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  letter-spacing: 0.5rem;
+  font-weight: 100;
+  text-align: center;
+  background-color: #1E2B4C;
+  color: #FFF9EB;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.bl_selectToggle_wrapper {
+  margin-bottom: 40px;
+  height: 48px;
+}
+
+.bl_selectCont {
+  display: none;
+}
+
+.bl_selectCont.is_active {
+  display: revert;
 }
 
 /* インフォメーション--------------------------- */

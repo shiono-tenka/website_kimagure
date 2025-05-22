@@ -195,6 +195,9 @@
     }
 
     &__tabs {
+        @include mix.sp {
+            display: none;
+        }
         background-color: var.$pastelYellow;
         width: 100%;
         margin: 0 auto;
@@ -295,7 +298,47 @@
 #Takeout:checked~#Takeout_content {
     display: block;
 }
+// レイアウト用
+.sp-menu{
+    @include mix.pc {
+        display: none;
+    }
+    @include mix.tab {
+        display: none;
+      }
+    @include mix.sp {
+        display: grid;
+        place-content: center;
+    }
 
+  }
+  .bl_selectToggle {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    letter-spacing: 0.5rem;
+    font-weight: 100;
+    text-align: center;
+    background-color: var.$mainBlue;
+    color: var.$pastelYellow;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+  }
+
+  .bl_selectToggle_wrapper {
+    margin-bottom: 40px;
+    height: 48px;
+  }
+  // コンテンツは非表示
+  .bl_selectCont {
+    display: none;
+  }
+  
+  // .is_activeが付与されたらコンテンツを表示
+  .bl_selectCont.is_active {
+    display: revert;
+  }
 
 
 /* インフォメーション--------------------------- */
