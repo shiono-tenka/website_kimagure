@@ -13,6 +13,11 @@
     z-index: 20;
     cursor: pointer;
 
+    @include mix.sp {
+        width: 43px;
+        height: 43px;
+    }
+
     span {
         width: 35px;
         height: 2px;
@@ -22,6 +27,14 @@
         left: 15px;
         border-radius: 1px;
         transition: all .4s;
+
+        @include mix.sp {
+            width: 25px;
+            height: 1px;
+            color: #F1D99E;
+            position: absolute;
+            left: 9px;
+        }
 
         &:nth-of-type(1) {
             top: 24px;
@@ -44,6 +57,16 @@
                 transform: rotate(45deg);
             }
         }
+        .header__hamburger-content--logo {
+            max-width: 90%;
+            padding-top: 22px;
+            img {
+                max-width: 30%;
+            }
+            span {
+                font-size: 0.8rem;
+            }
+        }
     }
 }
 
@@ -59,6 +82,7 @@
     pointer-events: none;
     opacity: 0;
     transition: none;
+
     @include mix.sp {
         width: 100%;
     }
@@ -66,21 +90,23 @@
     &--logo {
         max-width: 60%;
         margin: 0 auto;
-        padding-top: 44px;
+        padding-top: 22px;
         padding-bottom: 22px;
-        @include mix.sp {
-            max-width: 80%;
-        }
 
+        @include mix.sp {
+            max-width: 90%;
+        }
+        
         span {
             display: inline-block;
             vertical-align: 100%;
             margin-left: 32px;
             line-height: 1.5;
             font-size: 0.8rem;
+
             @include mix.sp {
-                vertical-align: 10px;
-                margin-left: 15%;
+                vertical-align: 5px;
+                margin-left: 8%;
                 font-size: 1.2rem;
             }
         }
@@ -106,6 +132,9 @@
         transform: translateY(-45%) translateX(-50%);
         /*子要素自体の大きさを考慮*/
         margin: auto;
+        @include mix.sp {
+            top: 45%;
+        }
 
         a {
             color: var.$yellow;
@@ -116,6 +145,9 @@
         li {
             margin-bottom: 32px;
             padding: var.$mgExtraSmall;
+            @include mix.sp {
+                margin-bottom: var.$mgSmall;
+            }
         }
         @include mix.sp {
             width: 70%; 
@@ -133,6 +165,18 @@
         pointer-events: auto;
         opacity: 1;
         transition: opacity 0.3s linear;
+
+        @include mix.sp {
+            .header__hamburger-content--logo {
+                img {
+                    max-width: 30%;
+                }
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+           
+        }
     }
 
     &--contact {
@@ -148,6 +192,10 @@
 
         &-tel {
             a {
+                @include mix.sp {
+                    width: auto;
+                    margin: auto;
+                }
                 &::before {
                     content: url(../img/top/tel.png);
                     padding-right: var.$pdExtraSmall;
@@ -155,8 +203,13 @@
                 }
             }
         }
+
         &-mail {
             a {
+                @include mix.sp {
+                    width: auto;
+                    margin: auto;
+                }
                 &::before {
                     content: url(../img/top/contact.png);
                     padding-right: var.$pdExtraSmall;
@@ -170,7 +223,8 @@
             bottom: 4%;
           }
     }
+
     a:hover {
         opacity: .7;
-      }      
+    }
 }

@@ -32,10 +32,6 @@ body {
     background-color: var.$baseBlue;
 }
 
-#header {
-    background-color: var.$baseBlue;
-}
-
 .en__txt {
     @include mix.poppins;
 }

@@ -1,19 +1,47 @@
+@use '../base/variables' as var;
+@use '../base/mixin' as mix;
+
 // INFOページ専用のスタイル
 // 記事一覧----------------------------
 .information {
     padding-top: 130px;
 
+    @include mix.sp {
+        padding: 0;
+    }
+
+    &__title {
+        @include mix.sp {
+            margin-top: 90px;
+        }
+    }
+
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include mix.sp {
+            flex-direction: column;
+        }
     }
 
     &__items {
         width: 44%;
 
+        @include mix.sp {
+            width: 100%;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            @include mix.sp {
+                display: none;
+            }
+        }
+
         &--img-bg {
-            margin-bottom: 20px;
+            margin-bottom: var.$mgSmall;
             background-color: #1E2B4C;
 
             img {
@@ -21,43 +49,74 @@
                 margin: auto;
                 padding-top: 26px;
                 padding-bottom: 26px;
+
+                @include mix.sp {
+                    max-width: 85%;
+                    padding: 13px 0 13px 0;
+                }
             }
         }
 
         &--subtitle {
             font-size: 1.25rem;
-            margin-top: 20px;
-            margin-bottom: 40px;
+            margin-top: var.$mgSmall;
+            margin-bottom: var.$mgMedium;
         }
+
         &:last-child {
             display: flex;
             justify-content: center;
             align-items: center;
+
             button {
                 height: 40px;
                 width: 80px;
                 background-color: #1E2B4C;
                 color: #FFF9EB;
+
+                @include mix.sp {
+                    font-size: 0.7rem;
+                }
             }
+
             p {
                 margin: 95px;
+
+                @include mix.sp {
+                    margin: 20px auto;
+                    font-size: 0.7rem;
+                }
             }
         }
     }
 
 }
+
 // ギャラリ----------------------------
 .garally {
     background-color: #FFF9EB;
+
     &__title {
         color: #1E2B4C;
         border-bottom: solid 1px #1E2B4C;
+
+        @include mix.sp {
+            border-bottom: none;
+        }
     }
+
     &__container {
-        padding-bottom: 100px;
+        padding-bottom: (var.$mgLarge / 2);
         display: grid;
         grid-template-rows: 16vw 16vw 32vw;
         grid-template-columns: 25% 25% 25% 25%;
+
+        @include mix.sp {
+            padding-bottom: (var.$pdSmall * 2);
+            grid-template-rows: 40vw 20vw 20vw 40vw 40vw;
+            grid-template-columns: 50% 50%;
+        }
+
         li {
             img {
                 width: 100%;
@@ -65,33 +124,75 @@
                 object-fit: cover;
             }
         }
+
         &--item01 {
             grid-row: 1/3;
             grid-column: 1/3;
+
+            @include mix.sp {
+                grid-row: 1/2;
+                grid-column: 1/3;
+            }
         }
+
         &--item02 {
             grid-row: 1/3;
             grid-column: 3/4;
+
+            @include mix.sp {
+                grid-row: 2/4;
+                grid-column: 1/2;
+            }
         }
+
         &--item03 {
             grid-row: 1/2;
             grid-column: 4/5;
+
+            @include mix.sp {
+                grid-row: 2/3;
+                grid-column: 2/3;
+            }
         }
+
         &--item04 {
             grid-row: 2/3;
             grid-column: 4/5;
+
+            @include mix.sp {
+                grid-row: 3/4;
+                grid-column: 2/3;
+            }
         }
+
         &--item05 {
             grid-row: 3/4;
             grid-column: 1/3;
+
+            @include mix.sp {
+                grid-row: 4/5;
+                grid-column: 1/3;
+            }
         }
+
         &--item06 {
             grid-row: 3/4;
             grid-column: 3/4;
+
+            @include mix.sp {
+                grid-row: 5/6;
+                grid-column: 1/2;
+            }
         }
+
         &--item07 {
             grid-row: 3/4;
             grid-column: 4/5;
+
+            @include mix.sp {
+                grid-row: 5/6;
+                grid-column: 2/3;
+            }
         }
     }
 }

@@ -1,17 +1,34 @@
+@use '../base/variables' as var;
+@use '../base/mixin' as mix;
+
 // フッターのスタイル
 .footer {
     color: #E6C570;
+    @include mix.sp {
+        max-width: 90%;
+    }
     &__navi {
         margin-top: 100px;
         margin-bottom: 100px;
         display: flex;
+        @include mix.sp {
+            margin: 40px auto 48px;
+            justify-content: space-between;
+        }
         li {
             margin-right: 40px;
+            @include mix.sp {
+                margin: 0;
+            }
         }
         a {
             padding-bottom: 8px;
             color: #E6C570;
             position: relative;
+            @include mix.sp {
+                padding-bottom: 0;
+                font-size: 0.7rem;
+            }
             &::after {
                 position: absolute;
                 left: 0;
@@ -38,11 +55,20 @@
             display: inline-block;
             width: 20%;
             margin-bottom: 100px;
+            @include mix.sp {
+                width: 32%;
+                margin-bottom: 48px;
+            }
         }
     }
     small {
         display: block;
         text-align: end;
         margin-bottom: 30px;
+        @include mix.sp {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 0.7rem;
+        }
     }
 }

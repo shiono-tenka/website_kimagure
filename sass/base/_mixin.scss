@@ -25,6 +25,10 @@
   max-width: $pc;
   margin: 0 auto;
 
+  // @include tab {
+  //   max-width: 614px;
+  // }
+
   @include sp {
     max-width: $sp;
   }
