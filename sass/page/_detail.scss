@@ -155,6 +155,9 @@ main {
         }
     }
     &__store-info {
+        @include mix.sp {
+            text-align: center;
+        }
         &--title {
             text-align: center;
             font-size: 1.25rem;
