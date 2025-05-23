@@ -262,7 +262,7 @@
             }
 
             div {
-                margin: var.$mgMedium auto;
+                margin: var.$mgMedium auto (var.$mgLarge / 2);
                 text-align: center;
                 line-height: 1.5;
 
@@ -359,16 +359,26 @@
         position: absolute;
         top: 0;
         right: 0;
+        @include mix.sp {
+            display: none;
+        }
     }
 
     &__wrapper {
         z-index: 1;
         position: relative;
     }
+    &__title {
+        margin-top: 0;
+    }
 
     &__content {
         width: 58.6%;
         margin-left: 41.3%;
+        @include mix.sp {
+            width: 100%;
+            margin-left: 0;
+        }
 
         &--img {
             margin-bottom: var.$mgSmall;
@@ -380,6 +390,9 @@
             border-bottom: solid 1px #FFF9EB;
             padding-top: var.$mgSmall;
             padding-bottom: var.$mgSmall;
+            @include mix.sp {
+                padding-bottom: (var.$mgSmall / 2);
+            }
 
             span {
                 float: left;
@@ -399,6 +412,7 @@
 
                 @include mix.sp {
                     padding: var.$mgSmall 50px;
+                    margin-bottom: 0;
                 }
 
                 &::after {
@@ -426,11 +440,17 @@
 
     &__title {
         border-bottom: solid 1px #1E2B4C;
+        @include mix.sp {
+            border-bottom: none;
+        }
     }
 
     &__container {
         display: flex;
         justify-content: space-evenly;
+        @include mix.sp {
+            flex-direction: column;
+        }
 
         &--content {
             width: 40%;
@@ -439,6 +459,7 @@
             margin-bottom: (var.$mgLarge / 2);
             height: 0;
             overflow: hidden;
+
         }
 
         &--map {
@@ -449,10 +470,20 @@
                 width: 100%;
                 height: 100%;
             }
+            @include mix.sp {
+                width: 100%;
+                padding-bottom: 60%;
+                margin-bottom: var.$mgSmall;
+            }
         }
 
         &--txt {
             line-height: 1.5;
+            @include mix.sp {
+                width: 100%;
+                padding-bottom: 75%;
+                margin-bottom: (var.$mgLarge / 2);
+            }
         }
 
         &--sub-title {

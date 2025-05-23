@@ -373,6 +373,11 @@ body {
 .footer {
   color: #E6C570;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer {
+    max-width: 90%;
+  }
+}
 .footer__navi {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -380,16 +385,28 @@ body {
 }
 @media screen and (min-width: 0px) and (max-width: 480px) {
   .footer__navi {
-    flex-direction: column;
+    margin: 40px auto 48px;
+    justify-content: space-between;
   }
 }
 .footer__navi li {
   margin-right: 40px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer__navi li {
+    margin: 0;
+  }
+}
 .footer__navi a {
   padding-bottom: 8px;
   color: #E6C570;
   position: relative;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer__navi a {
+    padding-bottom: 0;
+    font-size: 0.7rem;
+  }
 }
 .footer__navi a::after {
   position: absolute;
@@ -417,10 +434,23 @@ body {
   width: 20%;
   margin-bottom: 100px;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer__logo img {
+    width: 32%;
+    margin-bottom: 48px;
+  }
+}
 .footer small {
   display: block;
   text-align: end;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .footer small {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.7rem;
+  }
 }
 
 /* ヒーローエリア--------------------- */
@@ -632,7 +662,7 @@ body {
   object-fit: cover;
 }
 .menu__content--flexitem div {
-  margin: 40px auto;
+  margin: 40px auto 100px;
   text-align: center;
   line-height: 1.5;
 }
@@ -718,13 +748,27 @@ body {
   top: 0;
   right: 0;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .info__bg {
+    display: none;
+  }
+}
 .info__wrapper {
   z-index: 1;
   position: relative;
 }
+.info__title {
+  margin-top: 0;
+}
 .info__content {
   width: 58.6%;
   margin-left: 41.3%;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .info__content {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .info__content--img {
   margin-bottom: 20px;
@@ -735,6 +779,11 @@ body {
   border-bottom: solid 1px #FFF9EB;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .info__content--txt {
+    padding-bottom: 10px;
+  }
 }
 .info__content--txt span {
   float: left;
@@ -753,6 +802,7 @@ body {
 @media screen and (min-width: 0px) and (max-width: 480px) {
   .info__content--btn a {
     padding: 20px 50px;
+    margin-bottom: 0;
   }
 }
 .info__content--btn a::after {
@@ -774,9 +824,19 @@ body {
 .access__title {
   border-bottom: solid 1px #1E2B4C;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .access__title {
+    border-bottom: none;
+  }
+}
 .access__container {
   display: flex;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .access__container {
+    flex-direction: column;
+  }
 }
 .access__container--content {
   width: 40%;
@@ -793,8 +853,22 @@ body {
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .access__container--map {
+    width: 100%;
+    padding-bottom: 60%;
+    margin-bottom: 20px;
+  }
+}
 .access__container--txt {
   line-height: 1.5;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .access__container--txt {
+    width: 100%;
+    padding-bottom: 75%;
+    margin-bottom: 100px;
+  }
 }
 .access__container--sub-title {
   font-size: 1.25rem;
