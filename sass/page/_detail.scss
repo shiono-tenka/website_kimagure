@@ -1,7 +1,7 @@
 @use '../base/variables' as var;
 @use '../base/mixin' as mix;
 // DETAILページ専用のスタイル
-main {
+#main {
     background-color: #FFF9EB;
     color: #1E2B4C;
     padding-bottom: 100px;
